@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8e02c93112e8e8048b3d6070a23055f5
+guid: 041dbd843d2c450469809b343b645864
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mokoutest-Sheet_0
+      name: mokoutest-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b70b878245bee71478768873e4726e27
-      internalID: 84266630
+      spriteID: fb4f9bad9a9520d4faa72103cc394b69
+      internalID: -2048765675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mokoutest-Sheet_1
+      name: mokoutest-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f91f991878d75d45b3079259dcaef06
-      internalID: 670505352
+      spriteID: fd5ccd84ee8ab7444b3c357d38094c06
+      internalID: 1174217802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mokoutest-Sheet_2
+      name: mokoutest-Sheet 1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -163,14 +163,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0152208346875e84c921a261242fb93d
-      internalID: 1407625498
+      spriteID: b3e0e1a322be139499979d0403f08e3d
+      internalID: -1970767856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mokoutest-Sheet_3
+      name: mokoutest-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490d2555571ffe74d84e1017105f41e3
+      internalID: -687356303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mokoutest-Sheet 1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -184,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: accf75fcbd11fb34696dbb310df6b3c0
-      internalID: -1194938905
+      spriteID: 4273ed9bce7ade149aeda5e7c1ba54f2
+      internalID: -1377226975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mokoutest-Sheet_4
+      name: mokoutest-Sheet 1_5
       rect:
         serializedVersion: 2
         x: 32
@@ -205,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722122bf568300340b4fa5664206f73f
-      internalID: 1690235802
+      spriteID: 3c61dfea1c8e01b46a00b9c05253eafc
+      internalID: 1129001485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mokoutest-Sheet_5
+      name: mokoutest-Sheet 1_6
       rect:
         serializedVersion: 2
         x: 64
@@ -226,14 +247,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0af79c37fae5c4c4daa8a5278ca3dc36
-      internalID: -329063330
+      spriteID: d5b7968bfef2a994fb3485a41c8d9e2f
+      internalID: 1934362284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mokoutest-Sheet_6
+      name: mokoutest-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d1554ad5eda2b46a900c36e9aab922
+      internalID: 1543064062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mokoutest-Sheet 1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01cd60a00d0d649488834ccbe8c195db
-      internalID: -1884863898
+      spriteID: a7d7f8c1b7a8875449fba077339254a7
+      internalID: 311155358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mokoutest-Sheet_7
+      name: mokoutest-Sheet 1_9
       rect:
         serializedVersion: 2
         x: 32
@@ -268,8 +310,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0546978f9d134a14bbd8320b26079243
-      internalID: -943547692
+      spriteID: e378cc86118a2464c8534780d21f7276
+      internalID: 1442883766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mokoutest-Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c99b55886183e46acb4a0f5e4db00e
+      internalID: -267709638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mokoutest-Sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c799426137b7324dab65fd21b80360b
+      internalID: 1475240540
       vertices: []
       indices: 
       edges: []
@@ -285,14 +369,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mokoutest-Sheet_4: 1690235802
-      mokoutest-Sheet_6: -1884863898
-      mokoutest-Sheet_0: 84266630
-      mokoutest-Sheet_2: 1407625498
-      mokoutest-Sheet_5: -329063330
-      mokoutest-Sheet_1: 670505352
-      mokoutest-Sheet_3: -1194938905
-      mokoutest-Sheet_7: -943547692
+      mokoutest-Sheet 1_5: 1129001485
+      mokoutest-Sheet 1_3: -687356303
+      mokoutest-Sheet 1_10: -267709638
+      mokoutest-Sheet 1_6: 1934362284
+      mokoutest-Sheet 1_7: 1543064062
+      mokoutest-Sheet 1_11: 1475240540
+      mokoutest-Sheet 1_2: -1970767856
+      mokoutest-Sheet 1_1: 1174217802
+      mokoutest-Sheet 1_8: 311155358
+      mokoutest-Sheet 1_9: 1442883766
+      mokoutest-Sheet 1_4: -1377226975
+      mokoutest-Sheet 1_0: -2048765675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
