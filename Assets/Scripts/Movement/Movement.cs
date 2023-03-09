@@ -5,10 +5,11 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     //private serializefield vars
-    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private new Rigidbody2D rigidbody2D;
     [SerializeField] private Animator animator;
     [SerializeField] private float speed = 1f;
     [SerializeField] private float animatorSpeedRatio = 2f;
+
     //private vars
     private Vector2 movement;
 
@@ -28,6 +29,7 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //set animator global speed
         animator.speed = speed / animatorSpeedRatio;
         //set animator velocity vars
         animator.SetFloat("VelocityX", movement.x);
