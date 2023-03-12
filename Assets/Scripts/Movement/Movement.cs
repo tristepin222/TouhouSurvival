@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.VFX;
 public class Movement : MonoBehaviour
 {
     //private serializefield vars
     [SerializeField] private new Rigidbody2D rigidbody2D;
     [SerializeField] private Animator animator;
-    [SerializeField] private float speed = 1f;
+    [SerializeField] private float speed = 2f;
     [SerializeField] private float animatorSpeedRatio = 2f;
-
+    [SerializeField] private VisualEffect walkEffect;
     //private vars
     private Vector2 movement;
 
@@ -37,5 +37,15 @@ public class Movement : MonoBehaviour
 
         //move the rigidbody
         rigidbody2D.MovePosition(rigidbody2D.position + movement * speed * Time.fixedDeltaTime);
+
+        //test if movement is 0
+        if (!movement.Equals(Vector2.zero))
+        {
+            walkEffect.Stop();
+        }
+        else
+        {
+            walkEffect.SendEvent("Play");
+        }
     }
 }
