@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class AIMovement : MonoBehaviour
+using Pathfinding;
+public class AIMovement : Movement
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] AIDestinationSetter aIDestinationSetter;
+    [SerializeField] AIPath aIPath;
+
+    protected override void Start()
     {
-        
+        base.Start();
+        aIDestinationSetter.target = GameObject.FindGameObjectWithTag("Player").gameObject.transform;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void FixedUpdate()
     {
-        
+       
+    }
+    protected override void Update()
+    {
+
+        animator.SetFloat("VelocityX", aIPath.velocity.normalized.x);
+        animator.SetFloat("VelocityY", aIPath.velocity.normalized.y);
+
+        if (!aIPath.velocity.Equals(Vector2.zero))
+        {
+            walkEffect.Stop();
+        }
+        else
+        {
+            walkEffect.SendEvent("Play");
+        }
     }
 }

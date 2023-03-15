@@ -6,28 +6,29 @@ public class Movement : MonoBehaviour
 {
     //private serializefield vars
     [SerializeField] private new Rigidbody2D rigidbody2D;
-    [SerializeField] private Animator animator;
     [SerializeField] private float speed = 2f;
     [SerializeField] private float animatorSpeedRatio = 2f;
-    [SerializeField] private VisualEffect walkEffect;
+
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected VisualEffect walkEffect;
     //private vars
     private Vector2 movement;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         //get input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         //set animator global speed
         animator.speed = speed / animatorSpeedRatio;
