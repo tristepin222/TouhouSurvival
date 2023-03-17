@@ -381,6 +381,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6750386663488107605, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 68320852}
+    - targetCorrespondingSourceObject: {fileID: 6750386663488107605, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 68320858}
   m_SourcePrefab: {fileID: 100100000, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
 --- !u!1 &6154877
 GameObject:
@@ -706,6 +709,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8951219925885690165, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
   m_PrefabInstance: {fileID: 1752205}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &68320858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68320844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c279ca95c0b2c8f4ba141fb6f4778e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - objectName: 
+    color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &160404018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1635,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682710918}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
