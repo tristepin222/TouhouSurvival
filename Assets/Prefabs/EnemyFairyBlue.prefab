@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -1672053704, guid: f3f72ded9bf8a234c98bfdd2ed500e70, type: 3}
-  m_Color: {r: 0.64705884, g: 0.79607844, b: 1, a: 1}
+  m_Color: {r: 0.764151, g: 0.66460603, b: 0.30758274, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -242,7 +242,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -421750999, guid: f3f72ded9bf8a234c98bfdd2ed500e70, type: 3}
-  m_Color: {r: 0.64705884, g: 0.79607844, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.24217078, b: 0.6132076, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -370,7 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3351875860896357212, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Name
-      value: Hair
+      value: hair
       objectReference: {fileID: 0}
     - target: {fileID: 3616439949564117575, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Enabled
@@ -382,15 +382,15 @@ PrefabInstance:
       objectReference: {fileID: -2135854429, guid: f3f72ded9bf8a234c98bfdd2ed500e70, type: 3}
     - target: {fileID: 4562750283813865005, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Color.b
-      value: 0.9716981
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4562750283813865005, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Color.g
-      value: 0.6618547
+      value: 0.4117647
       objectReference: {fileID: 0}
     - target: {fileID: 4562750283813865005, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Color.r
-      value: 0.43543077
+      value: 0.31764707
       objectReference: {fileID: 0}
     - target: {fileID: 5572107188665602940, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Asset
@@ -450,11 +450,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Name
-      value: EnemyFairy
+      value: EnemyFairyBlue
       objectReference: {fileID: 0}
     - target: {fileID: 6363244338159657227, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Name
-      value: Torso
+      value: torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904097924337337641, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7019013356980756831, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_IsActive
@@ -465,28 +469,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1440485813, guid: f3f72ded9bf8a234c98bfdd2ed500e70, type: 3}
     - target: {fileID: 7187258433686505383, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_Color.b
+      value: 0.30980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187258433686505383, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Color.g
-      value: 0.7959438
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 7187258433686505383, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Color.r
-      value: 0.6462264
+      value: 0.7647059
       objectReference: {fileID: 0}
     - target: {fileID: 8208297468554311851, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Name
-      value: Ribbon
+      value: ribbon
       objectReference: {fileID: 0}
     - target: {fileID: 8233783668413910304, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8233783668413910304, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5286615
+      value: -4.6164494
       objectReference: {fileID: 0}
     - target: {fileID: 8233783668413910304, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4085783
+      value: -6.467485
       objectReference: {fileID: 0}
     - target: {fileID: 8233783668413910304, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.z
@@ -530,11 +538,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8675291516987200428, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Color.g
-      value: 0.79607844
+      value: 0.8862745
       objectReference: {fileID: 0}
     - target: {fileID: 8675291516987200428, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Color.r
-      value: 0.64705884
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1099821226, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
@@ -742,14 +750,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6750386663488107605}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c279ca95c0b2c8f4ba141fb6f4778e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   colours:
   - objectName: hair
-    color: {r: 1, g: 0, b: 0, a: 0}
+    color: {r: 1, g: 0, b: 0, a: 1}
+  - objectName: torso
+    color: {r: 1, g: 0, b: 0, a: 1}
+  - objectName: HairTop
+    color: {r: 1, g: 0, b: 0, a: 1}
+  - objectName: Eyes
+    color: {r: 1, g: 0, b: 0, a: 1}
+  - objectName: ribbon
+    color: {r: 1, g: 0, b: 0, a: 0.5882353}
 --- !u!4 &8951219925885690165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8233783668413910304, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
