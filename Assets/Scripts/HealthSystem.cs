@@ -16,13 +16,13 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public void Damage(float damage)
     {
         Health -= damage;
-        if((Health - damage) <= 0)
+        if ((Health - damage) <= 0)
         {
             Die();
         }
     }
     private void Die()
     {
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }
