@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
+  m_BindingMode: 4
   m_FollowOffset: {x: 0, y: 0, z: -10}
   m_XDamping: 1
   m_YDamping: 1
@@ -474,7 +474,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 0.9
+  orthographic size: 0.9386267
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -800,6 +800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mokou
       objectReference: {fileID: 0}
+    - target: {fileID: 7187258433686505383, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8233783668413910304, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -847,7 +851,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2038319209}
   m_SourcePrefab: {fileID: 100100000, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
 --- !u!1 &1620973750
 GameObject:
@@ -1170,3 +1177,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
   m_PrefabInstance: {fileID: 1475409600}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2038319208 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1099821224, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+  m_PrefabInstance: {fileID: 1475409600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2038319209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038319200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85675629470f8ef408b7cda0f31c4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fistDamage: 1
+  animator: {fileID: 2038319208}
