@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class FightSystem : MonoBehaviour
 {
-    [SerializeField] float fistDamage;
+    [SerializeField] float damage;
     [SerializeField] protected Animator animator;
-    [SerializeField] Collider2D[] collider2Ds;
+    [SerializeField] Weapon[] weapons;
+
+    private int indexWeapon;
+    private bool isFighting;
     // Start is called before the first frame update
     void Start()
     {
-        
+        indexWeapon = 0;
     }
 
     // Update is called once per frame
@@ -18,31 +21,24 @@ public class FightSystem : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            animator.Play("FistAttacks");
-            foreach (Collider2D collider2D in collider2Ds)
+            if (!isFighting)
             {
-                collider2D.enabled = true;
+                StartCoroutine(CoolDown());
             }
-            StartCoroutine(DisableAttack());
         }
         
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator CoolDown()
     {
-       
-        if(collision.TryGetComponent(out IDamageable hit))
+        isFighting = true;
+        weapons[indexWeapon].Attack();
+        indexWeapon++;
+        if (indexWeapon >= weapons.Length)
         {
-            hit.Damage(fistDamage);
+            indexWeapon = 0;
         }
+        yield return new WaitForSeconds(0.5f);
+        isFighting = false;
     }
-
-   private IEnumerator DisableAttack()
-    {
-        yield return new WaitForSeconds(0.3f);
-        foreach (Collider2D collider2D in collider2Ds)
-        {
-            collider2D.enabled = false;
-        }
-    }
+    
 }
