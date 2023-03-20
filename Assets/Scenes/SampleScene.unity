@@ -804,6 +804,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mokou
       objectReference: {fileID: 0}
+    - target: {fileID: 6904097924337337641, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_CallbackLayers.m_Bits
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904097924337337641, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_ContactCaptureLayers.m_Bits
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7187258433686505383, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -888,7 +896,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537119091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1190,7 +1198,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799518164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1255,3 +1263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fistDamage: 1
   animator: {fileID: 2038319208}
+  collider2Ds:
+  - {fileID: 1799518167}
+  - {fileID: 1537119094}
