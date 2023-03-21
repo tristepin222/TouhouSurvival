@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1099821229}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 0.9386267
+    OrthographicSize: 1
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -474,7 +474,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 0.9386267
+  orthographic size: 0.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384a2a3136145b74d93a2f0e18bcc1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  weapon: {fileID: 1475409604}
 --- !u!1 &1682710918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384a2a3136145b74d93a2f0e18bcc1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  weapon: {fileID: 1475409603}
 --- !u!1 &2038319200 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
