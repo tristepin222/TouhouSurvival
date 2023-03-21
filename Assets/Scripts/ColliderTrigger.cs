@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ColliderTrigger : MonoBehaviour
 {
-    [SerializeField] float damage;
+    [SerializeField] Weapon weapon;
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.tag == "Enemy")
         {
-            collision.GetComponent<HealthSystem>().Damage(damage);
+            weapon.Hit(collision.GetComponent<HealthSystem>());
             GetComponent<Collider2D>().enabled = false;
         }
     }
