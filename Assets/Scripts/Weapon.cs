@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.VFX;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] int damage;
@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] string animationName;
     [SerializeField] Animator animator;
-
+    [SerializeField] VisualEffect visualEffect;
     private bool canAttack;
     private void Start()
     {
@@ -50,6 +50,7 @@ public class Weapon : MonoBehaviour
         trackMouse = false;
         GetComponentInChildren<Collider2D>().enabled = true;
         CalculateRotationFromMouse();
+        visualEffect.SendEvent("PlayFire");
         animator.Play(animationName);
     }
 
@@ -57,6 +58,7 @@ public class Weapon : MonoBehaviour
     public IEnumerator ResetAnimation()
     {
         yield return 0;
+        visualEffect.Stop();
         GetComponentInChildren<Collider2D>().enabled = false;
         trackMouse = true;
     }
