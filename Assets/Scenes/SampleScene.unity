@@ -246,8 +246,8 @@ MonoBehaviour:
   m_Follow: {fileID: 1099821229}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 1
-    NearClipPlane: 0.3
+    OrthographicSize: 2.17
+    NearClipPlane: 0.15
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
@@ -470,11 +470,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.15
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 0.9
+  orthographic size: 2.17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_AssetsPPU: 100
+  m_AssetsPPU: 55
   m_RefResolutionX: 320
   m_RefResolutionY: 180
   m_CropFrame: 0
@@ -832,6 +832,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2326087927663674403, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773361367603528148, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2802555497411488648, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -879,6 +887,10 @@ PrefabInstance:
     - target: {fileID: 7187258433686505383, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7187258433686505383, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7456320323771709574, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_TagString
@@ -1083,7 +1095,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.08, y: -0.19484809}
   serializedVersion: 2
-  m_Radius: 0.030885816
+  m_Radius: 0.05
 --- !u!114 &1537119098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,7 +1397,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.077001356, y: -0.19484809}
   serializedVersion: 2
-  m_Radius: 0.030885816
+  m_Radius: 0.05
 --- !u!114 &1799518171
 MonoBehaviour:
   m_ObjectHideFlags: 0
