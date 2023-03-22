@@ -1807,11 +1807,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
 --- !u!1 &1770537073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,11 +1816,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1770537074}
-<<<<<<< Updated upstream
-=======
   - component: {fileID: 1770537075}
   - component: {fileID: 1770537076}
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: EffectPlayer
   m_TagString: Untagged
@@ -1848,8 +1840,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!114 &1770537075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,8 +1873,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 --- !u!1 &1776209906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,10 +2268,6 @@ MonoBehaviour:
   weapons:
   - {fileID: 1475409604}
   - {fileID: 1475409603}
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
   indexWeapon: 0
   isFighting: 0
 >>>>>>> Stashed changes
@@ -2301,7 +2285,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 2
   effectPlayer: {fileID: 0}
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
