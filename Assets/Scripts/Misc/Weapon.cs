@@ -23,6 +23,10 @@ public class Weapon : MonoBehaviour
         {
             CalculateRotation();
         }
+        else
+        {
+            CalculateRotationFromMouse();
+        }
     }
 
     private void CalculateRotation()
@@ -39,17 +43,16 @@ public class Weapon : MonoBehaviour
     private void CalculateRotationFromMouse()
     {
         Vector3 mousePosition = Input.mousePosition;
-        Vector3 objectPosition = Camera.main.WorldToScreenPoint(transform.position);
-        mousePosition.z = 0;
-        mousePosition -= objectPosition;
-        float angle = Mathf.Atan2(mousePosition.x, mousePosition.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        transform.LookAt(mousePosition, -Vector3.forward);
+
     }
+
+
     public void Attack()
     {
         trackMouse = false;
         GetComponentInChildren<Collider2D>().enabled = true;
-        CalculateRotationFromMouse();
         visualEffect.SendEvent("PlayFire");
         animator.Play(animationName);
     }
