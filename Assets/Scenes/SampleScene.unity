@@ -474,7 +474,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.17
+  orthographic size: 1.6363636
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -713,8 +713,8 @@ MonoBehaviour:
     weight: 100
   - gameObject: {fileID: 7924189879226301125, guid: 4eec147928cde0d45b62b8f8e8614ac9, type: 3}
     weight: 100
-  minRadius: 5
-  maxRadius: 10
+  minRadius: 15
+  maxRadius: 25
   player: {fileID: 2038319200}
 --- !u!212 &1099713439
 SpriteRenderer:
@@ -959,6 +959,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2038319209}
+    - targetCorrespondingSourceObject: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2038319217}
     - targetCorrespondingSourceObject: {fileID: 7017266944362165950, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1475409604}
@@ -1352,6 +1355,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1770537073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1770537074}
+  m_Layer: 0
+  m_Name: EffectPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1770537074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770537073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06137115, y: -0.15338756, z: -0.0015750002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1776209906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,3 +1675,17 @@ MonoBehaviour:
   weapons:
   - {fileID: 1475409604}
   - {fileID: 1475409603}
+--- !u!114 &2038319217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038319200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb44553a33b3e74cb56fcc3a839ed66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHealth: 2
+  effectPlayer: {fileID: 0}

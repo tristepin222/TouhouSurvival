@@ -6,7 +6,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
 {
     [SerializeField] float baseHealth;
 
-    private void Start()
+    protected void Start()
     {
         Health = baseHealth;
     }
@@ -16,13 +16,18 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public void Damage(float damage)
     {
         Health -= damage;
-        if ((Health - damage) < 0)
+        if((Health - damage) < 0)
         {
             Die();
         }
     }
-    private void Die()
+    protected virtual void Die()
     {
         Destroy(this.gameObject);
+    }
+
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    {
+
     }
 }
