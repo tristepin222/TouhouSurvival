@@ -713,8 +713,8 @@ MonoBehaviour:
     weight: 100
   - gameObject: {fileID: 7924189879226301125, guid: 4eec147928cde0d45b62b8f8e8614ac9, type: 3}
     weight: 100
-  minRadius: 5
-  maxRadius: 10
+  minRadius: 15
+  maxRadius: 25
   player: {fileID: 2038319200}
 --- !u!212 &1099713439
 SpriteRenderer:
