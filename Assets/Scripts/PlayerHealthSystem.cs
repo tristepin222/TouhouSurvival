@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerHealthSystem : HealthSystem
 {
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.transform.tag == "Enemy")
         {
             Damage(1f);
         }
