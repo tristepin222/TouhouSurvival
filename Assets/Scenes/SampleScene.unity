@@ -801,7 +801,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1475409606, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475409606, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475409607, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1475409607, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
@@ -1250,8 +1258,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5180900606708061596, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5180900606708061597, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
+      propertyPath: globalAnimator
+      value: 
+      objectReference: {fileID: 2074734765}
+    - target: {fileID: 5180900606708061597, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 2038319208}
     - target: {fileID: 5180900606708061599, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
       propertyPath: m_Name
       value: DeathScene
@@ -1272,3 +1288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 651a0306e7aa61341b0d6c4660b7f6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2074734765 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5180900606708061596, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
+  m_PrefabInstance: {fileID: 2074734763}
+  m_PrefabAsset: {fileID: 0}
