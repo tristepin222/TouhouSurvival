@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.VFX;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using System;
 
 public class EffectPlayer : MonoBehaviour
 {
+    [Serializable]
+    public class ButtonClickedEvent : UnityEvent { }
+
     [SerializeField] Animator animator;
-    [SerializeField] protected Animator globalAnimator;
-    [SerializeField] protected Animator playerAnimator;
-    [SerializeField] protected VisualEffect playerVisualEffect;
+    [SerializeField] VisualEffect visualEffect;
+    [SerializeField] string eventName;
+    [SerializeField] string animationName;
+    [SerializeField] bool isCentered = false;
+    [SerializeField]
+    private ButtonClickedEvent m_OnEffectStart = new ButtonClickedEvent();
+
     public void StopAllAIs()
     {
         AIPath[] gameObjects = FindObjectsOfType<AIPath>();
@@ -19,8 +29,26 @@ public class EffectPlayer : MonoBehaviour
             gameObject.canMove = false;
         }
     }
-    public void PlayDeathAnimation()
+    public void PlayEffect()
     {
+        m_OnEffectStart.Invoke();
+        visualEffect.SendEvent(eventName);
+    }
 
+    public void PlayAnimation()
+    {
+        if (isCentered)
+        {
+            this.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+        }
+        m_OnEffectStart.Invoke();
+        animator.Play(animationName);
+    }
+
+
+    public ButtonClickedEvent onEffectStart
+    {
+        get { return m_OnEffectStart; }
+        set { m_OnEffectStart = value; }
     }
 }
