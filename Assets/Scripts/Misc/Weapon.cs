@@ -54,10 +54,13 @@ public class Weapon : MonoBehaviour
     }
     public void Attack()
     {
-        trackMouse = false;
-        GetComponentInChildren<Collider2D>().enabled = true;
-        visualEffect.SendEvent("PlayFire");
-        animator.Play(animationName);
+        if (canAttack)
+        {
+            trackMouse = false;
+            GetComponentInChildren<Collider2D>().enabled = true;
+            visualEffect.SendEvent("PlayFire");
+            animator.Play(animationName);
+        }
     }
 
 
