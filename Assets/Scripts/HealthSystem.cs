@@ -16,21 +16,17 @@ public class HealthSystem : MonoBehaviour, IDamageable
     public void Damage(float damage)
     {
         Health -= damage;
-        if((Health - damage) <= 0)
+        if((Health - damage) < 0)
         {
             Die();
         }
     }
     protected void Die()
     {
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
-        {
-            Damage(1f);
-        }
     }
 }
