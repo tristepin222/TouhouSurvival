@@ -6,7 +6,7 @@ public class HealhSystem : MonoBehaviour, IDamageable
 {
     [SerializeField] float baseHealth;
 
-    private void Start()
+    protected void Start()
     {
         Health = baseHealth;
     }
@@ -21,12 +21,12 @@ public class HealhSystem : MonoBehaviour, IDamageable
             Die();
         }
     }
-    private void Die()
+    protected void Die()
     {
         Destroy(this);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
