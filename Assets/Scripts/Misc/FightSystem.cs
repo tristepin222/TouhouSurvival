@@ -40,5 +40,13 @@ public class FightSystem : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         isFighting = false;
     }
+
+    public void DisableWeapons()
+    {
+        foreach(Weapon weapon in weapons)
+        {
+            weapon.Disable();
+        }
+    }
     
 }
