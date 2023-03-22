@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
-    - time: 0
+    - time: 0.083333336
       value: {fileID: -267709638, guid: 041dbd843d2c450469809b343b645864, type: 3}
     attribute: m_Sprite
     path: Head
@@ -29,7 +29,7 @@ AnimationClip:
     flags: 2
   - serializedVersion: 2
     curve:
-    - time: 0
+    - time: 0.083333336
       value: {fileID: -1970767856, guid: 041dbd843d2c450469809b343b645864, type: 3}
     attribute: m_Sprite
     path: hair
@@ -38,7 +38,7 @@ AnimationClip:
     flags: 2
   - serializedVersion: 2
     curve:
-    - time: 0
+    - time: 0.083333336
       value: {fileID: -2048765675, guid: 041dbd843d2c450469809b343b645864, type: 3}
     attribute: m_Sprite
     path: ribbon
@@ -47,7 +47,7 @@ AnimationClip:
     flags: 2
   - serializedVersion: 2
     curve:
-    - time: 0
+    - time: 0.083333336
       value: {fileID: 1934362284, guid: 041dbd843d2c450469809b343b645864, type: 3}
     attribute: m_Sprite
     path: torso
@@ -107,7 +107,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.083333336
+    m_StopTime: 0.1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -126,11 +126,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.083333336
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
