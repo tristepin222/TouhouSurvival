@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] string animationName;
     [SerializeField] Animator animator;
     [SerializeField] VisualEffect visualEffect;
-    private bool canAttack;
+    private bool canAttack = true;
     private void Start()
     {
         Damage = damage;
@@ -19,13 +19,16 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if (trackMouse)
-        {
-            CalculateRotation();
-        }
-        else
-        {
-            CalculateRotationFromMouse();
+        if (canAttack) 
+        { 
+            if (trackMouse)
+            {
+                CalculateRotation();
+            }
+            else
+            {
+                CalculateRotationFromMouse();
+            }
         }
     }
 
@@ -69,5 +72,10 @@ public class Weapon : MonoBehaviour
     public void Hit(HealthSystem healthSystem)
     {
         healthSystem.Damage(Damage);
+    }
+
+    public void Disable()
+    {
+        canAttack = false;
     }
 }
