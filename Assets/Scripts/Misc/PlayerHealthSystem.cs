@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayerHealthSystem : HealthSystem
 {
     [SerializeField] EffectPlayer effectPlayer;
+    [SerializeField] new Rigidbody2D rigidbody2D;
+    [SerializeField] FightSystem fightSystem;
     protected override void Die()
     {
+        fightSystem.DisableWeapons();
         effectPlayer.StopAllAIs();
-        base.Die();
+        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+        effectPlayer.PlayAnimation();
     }
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
