@@ -10,8 +10,11 @@ public class ColliderTrigger : MonoBehaviour
 
         if (collision.tag == "Enemy")
         {
-            weapon.Hit(collision.GetComponent<HealthSystem>());
-            GetComponent<Collider2D>().enabled = false;
+            if(collision.TryGetComponent(out HealthSystem healthSystem))
+            {
+                weapon.Hit(healthSystem);
+                GetComponent<Collider2D>().enabled = false;
+            }
         }
     }
 }
