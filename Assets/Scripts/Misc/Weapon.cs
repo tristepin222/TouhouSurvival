@@ -43,12 +43,12 @@ public class Weapon : MonoBehaviour
     private void CalculateRotationFromMouse()
     {
         Vector3 mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        transform.LookAt(mousePosition, -Vector3.forward);
-
+        Vector3 objectPosition = Camera.main.WorldToScreenPoint(transform.position);
+        mousePosition.z = 0;
+        mousePosition -= objectPosition;
+        float angle = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
     }
-
-
     public void Attack()
     {
         trackMouse = false;
