@@ -821,6 +821,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2038319208}
     - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: fightSystem
+      value: 
+      objectReference: {fileID: 2038319221}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: rigidbody2D
       value: 
       objectReference: {fileID: 2038319218}
@@ -1303,6 +1307,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.13}
   m_Size: {x: 0.15, y: 0.38}
   m_Direction: 0
+--- !u!114 &2038319221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2038319209, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+  m_PrefabInstance: {fileID: 1475409600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038319200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85675629470f8ef408b7cda0f31c4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2074734763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1329,7 +1344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5180900605023235606, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5180900605023235610, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1369,7 +1384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5180900606597679028, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5180900606597679032, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1433,6 +1448,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5180900606708061596, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180900606708061597, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
+      propertyPath: isCentered
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5180900606708061597, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
