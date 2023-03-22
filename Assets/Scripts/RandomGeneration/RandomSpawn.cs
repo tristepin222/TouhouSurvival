@@ -14,7 +14,6 @@ public class RandomSPawn : MonoBehaviour
     {
         if (!isChecking)
         {
-            Debug.Log("spawn");
             StartCoroutine(CheckWeight());
         }
     }
