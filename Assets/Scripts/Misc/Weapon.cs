@@ -42,7 +42,7 @@ public class Weapon : MonoBehaviour
         Vector3 objectPosition = Camera.main.WorldToScreenPoint(transform.position);
         mousePosition.z = 0;
         mousePosition -= objectPosition;
-        float angle = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(mousePosition.x, mousePosition.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
     }
     public void Attack()
