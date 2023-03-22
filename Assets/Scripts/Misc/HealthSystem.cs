@@ -21,7 +21,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
             Die();
         }
     }
-    protected void Die()
+    protected virtual void Die()
     {
         Destroy(this.gameObject);
     }
