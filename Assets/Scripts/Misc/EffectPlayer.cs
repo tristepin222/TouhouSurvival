@@ -14,8 +14,8 @@ public class EffectPlayer : MonoBehaviour
 
     [SerializeField] Animator animator;
     [SerializeField] VisualEffect visualEffect;
-    [SerializeField] string eventName;
-    [SerializeField] string animationName;
+    [SerializeField] Death[] deaths;
+    [SerializeField] bool isRandom = false;
     [SerializeField] bool isCentered = false;
     [SerializeField]
     private ButtonClickedEvent m_OnEffectStart = new ButtonClickedEvent();
@@ -29,10 +29,20 @@ public class EffectPlayer : MonoBehaviour
             gameObject.canMove = false;
         }
     }
-    public void PlayEffect()
+    public void PlayEffect(int index = 0, bool invoke = true)
     {
-        m_OnEffectStart.Invoke();
-        visualEffect.SendEvent(eventName);
+        if (invoke)
+        {
+            m_OnEffectStart.Invoke();
+        }
+        if (isRandom)
+        {
+            visualEffect.SendEvent(deaths[index].eventName);
+        }
+        else
+        {
+            visualEffect.SendEvent(deaths[0].eventName);
+        }
     }
 
     public void PlayAnimation()
@@ -42,7 +52,16 @@ public class EffectPlayer : MonoBehaviour
             this.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
         }
         m_OnEffectStart.Invoke();
-        animator.Play(animationName);
+        if (isRandom)
+        {
+            int index = UnityEngine.Random.Range(0, deaths.Length);
+            animator.Play(deaths[index].animationName);
+            PlayEffect(index, false);
+        }
+        else
+        {
+            animator.Play(deaths[0].animationName);
+        }
     }
 
 
