@@ -7,7 +7,7 @@ using System;
 [Serializable]
 public class Death
 {
-    string eventName;
-    string animationName;
+    public string eventName;
+    public string animationName;
 }
 
