@@ -4,31 +4,32 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class HealthSystemTest : IPrebuildSetup
+public class HealthSystemTest
 {
     GameObject gameObject;
     HealthSystem healthSystem;
-    public void Setup()
+    [SetUp]
+    public void SetUpTest()
     {
-        GameObject gameObject = new GameObject();
+        gameObject = new GameObject();
         healthSystem = gameObject.AddComponent<HealthSystem>();
     }
 
-    [UnityTest]
+    [Test]
     public void SetHealthToOneDamageOneReturnsOne()
     {
         float Whenhealth = healthSystem.Health = 2;
 
         healthSystem.Damage(1);
 
+        Whenhealth--;
+
         Assert.AreEqual(Whenhealth, healthSystem.Health);
     }
-    [UnityTest]
+    [Test]
     public void SetHealthToZeroThrowsException()
     {
-        healthSystem.Health = 0;
-
-        Assert.Throws<EmptyHealthException>(() => healthSystem.Damage(1));
+        Assert.Throws<HealthSystem.EmptyHealthException>(() => healthSystem.Health = 0);
     }
 }
 
