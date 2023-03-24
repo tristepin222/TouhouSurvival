@@ -832,6 +832,90 @@ PrefabInstance:
       propertyPath: effectPlayer
       value: 
       objectReference: {fileID: 2038319209}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2038319209}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2038319209}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2038319221}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2038319200}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopAllAIs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DisableWeapons
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EffectPlayer, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EffectPlayer, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: FightSystem, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Name
       value: Mokou
