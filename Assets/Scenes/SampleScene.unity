@@ -1333,8 +1333,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2038319208}
   visualEffect: {fileID: 1475409601}
-  eventName: PlayBigFire
-  animationName: Death
+  deaths:
+  - eventName: 
+    animationName: Death
+  - eventName: PlayBigFire
+    animationName: Death2
+  isRandom: 1
   isCentered: 0
   m_OnEffectStart:
     m_PersistentCalls:
@@ -1554,6 +1558,14 @@ PrefabInstance:
       propertyPath: playerAnimator
       value: 
       objectReference: {fileID: 2038319208}
+    - target: {fileID: 5180900606708061597, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
+      propertyPath: deaths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180900606708061597, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
+      propertyPath: deaths.Array.data[0].animationName
+      value: Death
+      objectReference: {fileID: 0}
     - target: {fileID: 5180900606708061599, guid: 310cd282108eb8a42a2d9405e293775b, type: 3}
       propertyPath: m_Name
       value: DeathScene
