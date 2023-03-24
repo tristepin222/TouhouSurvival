@@ -10,7 +10,7 @@ using System;
 public class EffectPlayer : MonoBehaviour
 {
     [Serializable]
-    public class ButtonClickedEvent : UnityEvent { }
+    public class OnEffectEvent : UnityEvent { }
 
     [SerializeField] Animator animator;
     [SerializeField] VisualEffect visualEffect;
@@ -18,7 +18,7 @@ public class EffectPlayer : MonoBehaviour
     [SerializeField] bool isRandom = false;
     [SerializeField] bool isCentered = false;
     [SerializeField]
-    private ButtonClickedEvent m_OnEffectStart = new ButtonClickedEvent();
+    private OnEffectEvent m_OnEffectStart = new OnEffectEvent();
 
     public void StopAllAIs()
     {
@@ -65,7 +65,7 @@ public class EffectPlayer : MonoBehaviour
     }
 
 
-    public ButtonClickedEvent onEffectStart
+    public OnEffectEvent onEffectStart
     {
         get { return m_OnEffectStart; }
         set { m_OnEffectStart = value; }
