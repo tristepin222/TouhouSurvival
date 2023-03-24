@@ -1,30 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using System;
 
 public class PlayerHealthSystem : HealthSystem
 {
-    [SerializeField] public EffectPlayer effectPlayer;
+    [Serializable]
+    public class OnDeathEvent : UnityEvent { }
+
     [SerializeField] public new Rigidbody2D rigidbody2D;
-    [SerializeField] public FightSystem fightSystem;
+
+    [SerializeField]
+    private OnDeathEvent m_OnDeath = new OnDeathEvent();
+
     protected override void Die()
     {
-        if(effectPlayer == null)
-        {
-            throw new EmptyException.EmptyEffectPlayerException();
-        }
         if (rigidbody2D == null)
         {
             throw new EmptyException.EmptyRigidbody2DException();
         }
-        if (fightSystem == null)
-        {
-            throw new EmptyException.EmptyFightSystemException();
-        }
-        fightSystem.DisableWeapons();
-        effectPlayer.StopAllAIs();
         rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
-        effectPlayer.PlayAnimation();
     }
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,5 +29,11 @@ public class PlayerHealthSystem : HealthSystem
         {
             Damage(1f);
         }
+    }
+
+    public OnDeathEvent onEffectStart
+    {
+        get { return m_OnDeath; }
+        set { m_OnDeath = value; }
     }
 }
