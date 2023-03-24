@@ -2,15 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+using System;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using System;
+
 public class Weapon : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] bool trackMouse;
     [SerializeField] GameObject player;
-    [SerializeField] string animationName;
-    [SerializeField] Animator animator;
-    [SerializeField] VisualEffect visualEffect;
     private bool canAttack = true;
+
+    [Serializable]
+    public class OnAttackEvent : UnityEvent { }
+    [Serializable]
+    public class OnResetEvent : UnityEvent { }
+
+    [SerializeField]
+    private OnAttackEvent m_OnAttack = new OnAttackEvent();
+    [SerializeField]
+    private OnResetEvent m_OnReset = new OnResetEvent();
+
     private void Start()
     {
         Damage = damage;
@@ -57,9 +70,7 @@ public class Weapon : MonoBehaviour
         if (canAttack)
         {
             trackMouse = false;
-            GetComponentInChildren<Collider2D>().enabled = true;
-            visualEffect.SendEvent("PlayFire");
-            animator.Play(animationName);
+            m_OnAttack.Invoke();
         }
     }
 
@@ -67,8 +78,7 @@ public class Weapon : MonoBehaviour
     public IEnumerator ResetAnimation()
     {
         yield return 0;
-        visualEffect.Stop();
-        GetComponentInChildren<Collider2D>().enabled = false;
+        m_OnReset.Invoke();
         trackMouse = true;
     }
 
@@ -80,5 +90,16 @@ public class Weapon : MonoBehaviour
     public void Disable()
     {
         canAttack = false;
+    }
+
+    public OnAttackEvent onAttack
+    {
+        get { return m_OnAttack; }
+        set { m_OnAttack = value; }
+    }
+    public OnResetEvent onReset
+    {
+        get { return m_OnReset; }
+        set { m_OnReset = value; }
     }
 }
