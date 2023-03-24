@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class PlayerHealthSystem : HealthSystem
 {
-    [SerializeField] EffectPlayer effectPlayer;
-    [SerializeField] new Rigidbody2D rigidbody2D;
-    [SerializeField] FightSystem fightSystem;
+    [SerializeField] public EffectPlayer effectPlayer;
+    [SerializeField] public new Rigidbody2D rigidbody2D;
+    [SerializeField] public FightSystem fightSystem;
     protected override void Die()
     {
+        if(effectPlayer == null)
+        {
+            throw new EmptyException.EmptyEffectPlayerException();
+        }
+        if (rigidbody2D == null)
+        {
+            throw new EmptyException.EmptyRigidbody2DException();
+        }
+        if (fightSystem == null)
+        {
+            throw new EmptyException.EmptyFightSystemException();
+        }
         fightSystem.DisableWeapons();
         effectPlayer.StopAllAIs();
         rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
