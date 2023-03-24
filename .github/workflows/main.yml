@@ -36,16 +36,16 @@ jobs:
       - name: Restore Library cache
         uses: actions/cache@v2
         with:
-          path: test-projects/test-project/Library
+          path: Library
           key: Library-test-project-${{ matrix.targetPlatform }}
           restore-keys: |
-            Library-test-project-
             Library-
       # Configure test runner
-      - uses: game-ci/unity-test-runner@v2.0-alpha-5
-        id: testRunner
+      - id: testrunner
+        uses: game-ci/unity-test-runner@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: test-projects/test-project
           testMode: ${{ matrix.testMode }}
           checkName: ${{ matrix.testMode }} test results
           githubToken: ${{ secrets.GITHUB_TOKEN }}
