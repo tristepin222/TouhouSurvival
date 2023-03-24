@@ -19,9 +19,7 @@ public class PlayerHealthSystemTest
         effectPlayer = gameObject.AddComponent<EffectPlayer>();
         rigidbody2D = gameObject.AddComponent<Rigidbody2D>();
         fightSystem = gameObject.AddComponent<FightSystem>();
-        playerHealthSystem.effectPlayer = effectPlayer;
         playerHealthSystem.rigidbody2D = rigidbody2D;
-        playerHealthSystem.fightSystem = fightSystem;
     }
 
     [Test]
@@ -49,21 +47,9 @@ public class PlayerHealthSystemTest
         Assert.IsTrue(gameObject != null);
     }
     [Test]
-    public void NullEffectPlayerThrowsException()
-    {
-        playerHealthSystem.effectPlayer = null;
-        Assert.Throws<EmptyException.EmptyEffectPlayerException>(() => playerHealthSystem.Damage(2));
-    }
-    [Test]
     public void NullEffectRigidbody2DException()
     {
         playerHealthSystem.rigidbody2D = null;
         Assert.Throws<EmptyException.EmptyRigidbody2DException>(() => playerHealthSystem.Damage(2));
-    }
-    [Test]
-    public void NullEffectFightSystemException()
-    {
-        playerHealthSystem.fightSystem = null;
-        Assert.Throws<EmptyException.EmptyFightSystemException>(() => playerHealthSystem.Damage(2));
     }
 }
