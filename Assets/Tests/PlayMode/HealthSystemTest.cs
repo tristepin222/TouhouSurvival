@@ -26,10 +26,20 @@ public class HealthSystemTest
 
         Assert.AreEqual(Whenhealth, healthSystem.Health);
     }
-    [Test]
-    public void SetHealthToZeroThrowsException()
+
+    [UnityTest]
+    public IEnumerator DamageToZeroDestroyGameObject()
     {
-        Assert.Throws<HealthSystem.EmptyHealthException>(() => healthSystem.Health = 0);
+        GameObject gameObjectToDestroy = new GameObject();
+        healthSystem = gameObjectToDestroy.AddComponent<HealthSystem>();
+        float Whenhealth = healthSystem.Health = 2;
+
+        healthSystem.Damage(2);
+
+        yield return new WaitForEndOfFrame();
+
+        //unity workaround even if object is destroyed, it's not "null"
+        Assert.IsTrue(gameObjectToDestroy == null);
     }
 }
 
