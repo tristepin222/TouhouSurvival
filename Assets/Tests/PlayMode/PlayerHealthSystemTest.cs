@@ -4,15 +4,15 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class HealthSystemTest
+public class PlayerHealthSystemTest
 {
     GameObject gameObject;
-    HealthSystem healthSystem;
+    PlayerHealthSystem healthSystem;
     [SetUp]
     public void SetUpTest()
     {
         gameObject = new GameObject();
-        healthSystem = gameObject.AddComponent<HealthSystem>();
+        healthSystem = gameObject.AddComponent<PlayerHealthSystem>();
     }
 
     [Test]
@@ -28,10 +28,10 @@ public class HealthSystemTest
     }
 
     [UnityTest]
-    public IEnumerator DamageToZeroDestroyGameObject()
+    public IEnumerator DamageToZeroDoesNotDestroyGameObject()
     {
         GameObject gameObjectToDestroy = new GameObject();
-        healthSystem = gameObjectToDestroy.AddComponent<HealthSystem>();
+        healthSystem = gameObjectToDestroy.AddComponent<PlayerHealthSystem>();
         float Whenhealth = healthSystem.Health = 2;
 
         healthSystem.Damage(2);
@@ -39,7 +39,6 @@ public class HealthSystemTest
         yield return new WaitForEndOfFrame();
 
         //unity workaround even if object is destroyed, it's not "null"
-        Assert.IsTrue(gameObjectToDestroy == null);
+        Assert.IsTrue(gameObjectToDestroy != null);
     }
 }
-
