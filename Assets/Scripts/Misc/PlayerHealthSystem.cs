@@ -22,6 +22,7 @@ public class PlayerHealthSystem : HealthSystem
             throw new EmptyException.EmptyRigidbody2DException();
         }
         rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+        m_OnDeath.Invoke();
     }
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
