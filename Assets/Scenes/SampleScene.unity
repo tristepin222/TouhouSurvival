@@ -728,6 +728,16 @@ MonoBehaviour:
     weight: 100
   - gameObject: {fileID: 7924189879226301125, guid: 4eec147928cde0d45b62b8f8e8614ac9, type: 3}
     weight: 100
+  - gameObject: {fileID: 6750386663488107605, guid: fde72038f229329439eec72ab14d5cb5, type: 3}
+    weight: 100
+  - gameObject: {fileID: 6750386663488107605, guid: 02672b52ac9a3694d942169135806503, type: 3}
+    weight: 100
+  - gameObject: {fileID: 6750386663488107605, guid: ca773b705c210cb4db19588e1b46b5ea, type: 3}
+    weight: 100
+  - gameObject: {fileID: 6285719588277356974, guid: dbf9ca4378356974c9fb0184d797b500, type: 3}
+    weight: 100
+  - gameObject: {fileID: 7577902102271510507, guid: b38fc60d1dd66b14db44fe126c1cb40d, type: 3}
+    weight: 100
   minRadius: 15
   maxRadius: 25
   player: {fileID: 2038319200}
