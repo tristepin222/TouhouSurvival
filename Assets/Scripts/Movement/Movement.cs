@@ -5,10 +5,10 @@ using UnityEngine.VFX;
 public class Movement : MonoBehaviour
 {
     //private serializefield vars
-    [SerializeField] private new Rigidbody2D rigidbody2D;
-    [SerializeField] private float speed = 2f;
     [SerializeField] private float animatorSpeedRatio = 2f;
 
+    [SerializeField] protected new Rigidbody2D rigidbody2D;
+    [SerializeField] protected float speed = 2f;
     [SerializeField] protected Animator animator;
     [SerializeField] protected VisualEffect walkEffect;
     //private vars

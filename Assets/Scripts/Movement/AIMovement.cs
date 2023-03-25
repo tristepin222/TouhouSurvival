@@ -11,15 +11,14 @@ public class AIMovement : Movement
     protected override void Start()
     {
         base.Start();
+        GameObject target = GameObject.FindGameObjectWithTag("Player").gameObject;
         if (!isStatic)
         {
-            aIDestinationSetter.target = GameObject.FindGameObjectWithTag("Player").gameObject.transform;
+            aIDestinationSetter.target = target.transform;
         }
         if (isLinear)
         {
-            GameObject gameObject = Instantiate(new GameObject());
-            gameObject.transform.position = GameObject.FindGameObjectWithTag("Player").gameObject.transform.position;
-            aIDestinationSetter.target = gameObject.transform;
+            rigidbody2D.AddForce((target.transform.position - transform.position) * speed);
         }
 
     }
