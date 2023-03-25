@@ -489,7 +489,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 1.6363636
+  orthographic size: 2.17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1134,6 +1134,14 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1988587616, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988587616, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -833376193
+      objectReference: {fileID: 0}
     - target: {fileID: 2038319209, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: animator
       value: 
@@ -1688,6 +1696,7 @@ MonoBehaviour:
     animationName: Death2
   isRandom: 1
   isCentered: 0
+  time: 1
   m_OnEffectStart:
     m_PersistentCalls:
       m_Calls:
