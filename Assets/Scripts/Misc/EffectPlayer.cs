@@ -17,6 +17,7 @@ public class EffectPlayer : MonoBehaviour
     [SerializeField] Death[] deaths;
     [SerializeField] bool isRandom = false;
     [SerializeField] bool isCentered = false;
+    [SerializeField] float time;
     [SerializeField]
     private OnEffectEvent m_OnEffectStart = new OnEffectEvent();
 
@@ -29,8 +30,9 @@ public class EffectPlayer : MonoBehaviour
             gameObject.canMove = false;
         }
     }
-    public void PlayEffect(int index = 0, bool invoke = true)
+    public IEnumerator PlayEffect(int index = 0, bool invoke = true)
     {
+        yield return new WaitForSeconds(time);
         if (invoke)
         {
             m_OnEffectStart.Invoke();
@@ -56,7 +58,7 @@ public class EffectPlayer : MonoBehaviour
         {
             int index = UnityEngine.Random.Range(0, deaths.Length);
             animator.Play(deaths[index].animationName);
-            PlayEffect(index, false);
+            StartCoroutine(PlayEffect(index, false));
         }
         else
         {
