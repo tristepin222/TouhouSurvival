@@ -9,5 +9,6 @@ public class Death
 {
     public string eventName;
     public string animationName;
+    public AudioClip clip;
 }
 

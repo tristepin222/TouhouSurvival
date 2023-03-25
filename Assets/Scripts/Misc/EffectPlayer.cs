@@ -18,6 +18,7 @@ public class EffectPlayer : MonoBehaviour
     [SerializeField] bool isRandom = false;
     [SerializeField] bool isCentered = false;
     [SerializeField] float time;
+    [SerializeField] AudioSource audioSource;
     [SerializeField]
     private OnEffectEvent m_OnEffectStart = new OnEffectEvent();
 
@@ -58,12 +59,20 @@ public class EffectPlayer : MonoBehaviour
         {
             int index = UnityEngine.Random.Range(0, deaths.Length);
             animator.Play(deaths[index].animationName);
+            if (deaths[index].clip != null)
+            {
+                audioSource.clip = deaths[index].clip;
+            }
             StartCoroutine(PlayEffect(index, false));
         }
         else
         {
             animator.Play(deaths[0].animationName);
         }
+    }
+    public void PlaySound()
+    {
+        audioSource.Play();
     }
 
 
