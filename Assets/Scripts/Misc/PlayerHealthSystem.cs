@@ -34,6 +34,7 @@ public class PlayerHealthSystem : HealthSystem
         if (collision.transform.tag == "Enemy")
         {
             Damage(1f);
+            Destroy(collision.gameObject);
         }
     }
 
