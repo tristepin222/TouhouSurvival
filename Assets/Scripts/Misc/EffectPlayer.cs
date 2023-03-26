@@ -66,6 +66,10 @@ public class EffectPlayer : MonoBehaviour
         }
     }
 
+    public void StopEffect()
+    {
+        visualEffect.Stop();
+    }
 
     public OnEffectEvent onEffectStart
     {
