@@ -45,6 +45,10 @@ public class EffectPlayer : MonoBehaviour
         animator.Play(animationName);
     }
 
+    public void StopEffect()
+    {
+        visualEffect.Stop();
+    }
 
     public ButtonClickedEvent onEffectStart
     {
