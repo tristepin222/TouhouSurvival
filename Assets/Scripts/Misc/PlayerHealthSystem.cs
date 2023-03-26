@@ -11,18 +11,23 @@ public class PlayerHealthSystem : HealthSystem
     public class OnDeathEvent : UnityEvent { }
 
     [SerializeField] public new Rigidbody2D rigidbody2D;
+    [SerializeField] bool isDead;
 
     [SerializeField]
     private OnDeathEvent m_OnDeath = new OnDeathEvent();
 
     protected override void Die()
     {
-        if (rigidbody2D == null)
+        if (!isDead)
         {
-            throw new EmptyException.EmptyRigidbody2DException();
+            if (rigidbody2D == null)
+            {
+                throw new EmptyException.EmptyRigidbody2DException();
+            }
+            rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+            m_OnDeath.Invoke();
+            isDead = true;
         }
-        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
-        m_OnDeath.Invoke();
     }
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
