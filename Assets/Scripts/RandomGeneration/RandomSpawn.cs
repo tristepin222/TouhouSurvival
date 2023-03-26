@@ -9,7 +9,7 @@ public class RandomSPawn : MonoBehaviour
     [SerializeField] float maxRadius;
     [SerializeField] GameObject player;
 
-    const int MAX_SPAWN_COUNT = 25;
+    const int MAX_SPAWN_COUNT = 10;
 
     private bool isChecking;
     private int spawnCount;
