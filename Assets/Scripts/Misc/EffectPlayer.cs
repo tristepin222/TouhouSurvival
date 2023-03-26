@@ -75,6 +75,10 @@ public class EffectPlayer : MonoBehaviour
         audioSource.Play();
     }
 
+    public void StopEffect()
+    {
+        visualEffect.Stop();
+    }
 
     public OnEffectEvent onEffectStart
     {
