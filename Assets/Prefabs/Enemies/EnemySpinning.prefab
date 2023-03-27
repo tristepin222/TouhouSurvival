@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6750386663488107605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5003095, y: -21.810516, z: 0}
+  m_LocalPosition: {x: -1.2143267, y: 16.5534, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -562,6 +562,8 @@ MonoBehaviour:
   aIDestinationSetter: {fileID: 4867411704112818969}
   aIPath: {fileID: 5960019753486628559}
   isStatic: 1
+  isRandom: 0
+  randomRadius: 0
 --- !u!73398921 &6460132070704883397
 VFXRenderer:
   serializedVersion: 1
