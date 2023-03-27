@@ -489,7 +489,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.17
+  orthographic size: 1.6363636
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -735,9 +735,9 @@ MonoBehaviour:
   - gameObject: {fileID: 6750386663488107605, guid: ca773b705c210cb4db19588e1b46b5ea, type: 3}
     weight: 100
   - gameObject: {fileID: 6285719588277356974, guid: dbf9ca4378356974c9fb0184d797b500, type: 3}
-    weight: 10
+    weight: 30
   - gameObject: {fileID: 7577902102271510507, guid: b38fc60d1dd66b14db44fe126c1cb40d, type: 3}
-    weight: 10
+    weight: 30
   minRadius: 12
   maxRadius: 17
   player: {fileID: 2038319200}
