@@ -7,20 +7,16 @@ public class AIMovement : Movement
     [SerializeField] AIDestinationSetter aIDestinationSetter;
     [SerializeField] AIPath aIPath;
     [SerializeField] bool isStatic;
-    [SerializeField] bool isLinear;
+
+    GameObject target;
     protected override void Start()
     {
         base.Start();
-        GameObject target = GameObject.FindGameObjectWithTag("Player").gameObject;
+        target = GameObject.FindGameObjectWithTag("Player").gameObject;
         if (!isStatic)
         {
             aIDestinationSetter.target = target.transform;
         }
-        if (isLinear)
-        {
-            rigidbody2D.AddForce((target.transform.position - transform.position) * speed);
-        }
-
     }
 
     protected override void FixedUpdate()
@@ -29,9 +25,9 @@ public class AIMovement : Movement
     }
     protected override void Update()
     {
-
         animator.SetFloat("VelocityX", aIPath.velocity.normalized.x);
         animator.SetFloat("VelocityY", aIPath.velocity.normalized.y);
+
 
         if (!aIPath.velocity.Equals(Vector2.zero))
         {
