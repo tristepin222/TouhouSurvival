@@ -794,7 +794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6750386663488107605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.27126, y: -19.87381, z: 0}
+  m_LocalPosition: {x: -8.388618, y: -10.733206, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1067,13 +1067,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94610b81e70c19848a51533cd09045cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorSpeedRatio: 2
   rigidbody2D: {fileID: 1044089127867522238}
   speed: 2
-  animatorSpeedRatio: 2
   animator: {fileID: 1044089127867522237}
   walkEffect: {fileID: 4839470127910600553}
   aIDestinationSetter: {fileID: 4867411704112818969}
   aIPath: {fileID: 5960019753486628559}
+  isStatic: 0
+  isRandom: 0
+  randomRadius: 0
 --- !u!73398921 &6460132070704883397
 VFXRenderer:
   serializedVersion: 1
@@ -1191,7 +1194,7 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 0.4
   pickNextWaypointDist: 2
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0

@@ -22,14 +22,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         } 
         set 
         { 
-            if(value == 0)
-            {
-                throw new EmptyHealthException();
-            }
-            else
-            {
-                currentHealth = value;
-            }
+            currentHealth = value;
         } 
     }
 

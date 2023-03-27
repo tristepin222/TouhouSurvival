@@ -25,10 +25,10 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 0
-    y: -735
-    width: 2731
-    height: 2484
+    x: -0
+    y: -773
+    width: 2732
+    height: 2528
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2629,7 +2629,7 @@ MonoBehaviour:
   particlePerStripCount: 16
   needsComputeBounds: 0
   boundsMode: 0
-  m_Space: 1
+  m_Space: 0
 --- !u!114 &8926484042661614689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3438,7 +3438,7 @@ MonoBehaviour:
   m_Children:
   - {fileID: 8926484042661614714}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661614713}
   m_MasterData:
@@ -3475,7 +3475,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614716}
   - {fileID: 8926484042661614717}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661614713}
   m_MasterData:
@@ -4941,9 +4941,9 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614761}
       inputSlot: {fileID: 8926484042661614753}
-    position: {x: 2082, y: 1093}
+    position: {x: 2078, y: 1414.6666}
     expandedSlots: []
-    expanded: 0
+    expanded: 1
 --- !u!114 &8926484042661614761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5126,7 +5126,7 @@ MonoBehaviour:
         m_SerializableType: UnityEditor.VFX.Position, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"position":{"x":-0.20000000298023225,"y":-0.3199999928474426,"z":-0.10000000149011612}}'
-    m_Space: 1
+    m_Space: 0
   m_Property:
     name: A
     m_serializedType:
@@ -5296,7 +5296,7 @@ MonoBehaviour:
         m_SerializableType: UnityEditor.VFX.Position, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       m_SerializableObject: '{"position":{"x":0.20000000298023225,"y":-0.3199999928474426,"z":0.10000000149011612}}'
-    m_Space: 1
+    m_Space: 0
   m_Property:
     name: B
     m_serializedType:
@@ -5686,7 +5686,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1607, y: -735}
+  m_UIPosition: {x: 1667, y: -773}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []

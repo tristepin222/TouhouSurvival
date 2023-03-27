@@ -8,13 +8,21 @@ public class RandomSPawn : MonoBehaviour
     [SerializeField] float minRadius;
     [SerializeField] float maxRadius;
     [SerializeField] GameObject player;
+
+    const int MAX_SPAWN_COUNT = 25;
+
     private bool isChecking;
+    private int spawnCount;
     // Update is called once per frame
     void Update()
     {
-        if (!isChecking)
+        if (spawnCount <= MAX_SPAWN_COUNT)
         {
-            StartCoroutine(CheckWeight());
+            if (!isChecking)
+            {
+                StartCoroutine(CheckWeight());
+                spawnCount++;
+            }
         }
     }
 
@@ -23,6 +31,7 @@ public class RandomSPawn : MonoBehaviour
         isChecking = true;
         float weightTotal = CalculateWeightTotal();
         float random = Random.Range(0, weightTotal);
+        yield return new WaitForSeconds(3f);
         foreach (ObjectSpawn objectSpawn in objectSpawns)
         {
             
@@ -30,8 +39,8 @@ public class RandomSPawn : MonoBehaviour
             {
                
                 Spawn(objectSpawn.gameObject);
-                yield return new WaitForSeconds(3f);
                 isChecking = false;
+                yield break;
             }
             else
             {

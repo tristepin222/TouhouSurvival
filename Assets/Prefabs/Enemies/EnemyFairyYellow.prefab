@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: colours.Array.data[4].color.r
       value: 0.6509804
       objectReference: {fileID: 0}
+    - target: {fileID: 5960019753486628559, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+      propertyPath: slowdownDistance
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6750386663488107605, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
       propertyPath: m_Name
       value: EnemyFairyYellow
@@ -126,11 +130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8951219925885690165, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.912327
+      value: 9.172095
       objectReference: {fileID: 0}
     - target: {fileID: 8951219925885690165, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.913875
+      value: -12.520036
       objectReference: {fileID: 0}
     - target: {fileID: 8951219925885690165, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
       propertyPath: m_LocalPosition.z
