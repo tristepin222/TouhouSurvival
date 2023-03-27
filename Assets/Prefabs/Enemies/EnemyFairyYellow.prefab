@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: colours.Array.data[4].color.r
       value: 0.6509804
       objectReference: {fileID: 0}
+    - target: {fileID: 5960019753486628559, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+      propertyPath: slowdownDistance
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6750386663488107605, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
       propertyPath: m_Name
       value: EnemyFairyYellow
