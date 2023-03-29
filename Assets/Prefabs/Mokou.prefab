@@ -328,9 +328,12 @@ MonoBehaviour:
   damage: 1
   trackMouse: 1
   player: {fileID: 6040287386948589632}
-  animationName: RHA
-  animator: {fileID: 1475409606}
-  visualEffect: {fileID: 1799518174}
+  m_OnAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnReset:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1475409606
 Animator:
   serializedVersion: 5
@@ -794,7 +797,7 @@ Transform:
   - {fileID: 2062921746642571541}
   - {fileID: 1988587615}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1099821224
 Animator:
@@ -855,9 +858,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca975814070f6dd49810f5a02cf8c149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorSpeedRatio: 1
   rigidbody2D: {fileID: 1099821227}
   speed: 1
-  animatorSpeedRatio: 1
   animator: {fileID: 1099821224}
   walkEffect: {fileID: 5572107188665602940}
 --- !u!82 &2038319205
@@ -1098,12 +1101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  globalAnimator: {fileID: 0}
-  playerAnimator: {fileID: 0}
-  playerVisualEffect: {fileID: 0}
+  animator: {fileID: 0}
   weapons:
   - {fileID: 1475409604}
   - {fileID: 1475409603}
+  menu: {fileID: 1943672085778378894, guid: 3630c7afdb16f324aa687f267327b045, type: 3}
 --- !u!114 &2038319217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,7 +1119,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 2
-  effectPlayer: {fileID: 0}
+  rigidbody2D: {fileID: 0}
+  isDead: 0
+  m_OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6363244338159657227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,9 +1257,12 @@ MonoBehaviour:
   damage: 1
   trackMouse: 1
   player: {fileID: 6040287386948589632}
-  animationName: LHA
-  animator: {fileID: 1475409607}
-  visualEffect: {fileID: 1537119100}
+  m_OnAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnReset:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1475409607
 Animator:
   serializedVersion: 5
