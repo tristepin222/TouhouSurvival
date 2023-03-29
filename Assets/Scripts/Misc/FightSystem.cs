@@ -7,7 +7,7 @@ public class FightSystem : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] protected Animator animator;
     [SerializeField] Weapon[] weapons;
-
+    [SerializeField] GameObject menu;
     private int indexWeapon;
     private bool isFighting;
     // Start is called before the first frame update
@@ -25,6 +25,10 @@ public class FightSystem : MonoBehaviour
             {
                 StartCoroutine(CoolDown());
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Instantiate(menu);
         }
         
     }
