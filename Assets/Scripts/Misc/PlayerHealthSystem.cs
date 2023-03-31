@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System;
+using UnityEngine.UI;
 
 public class PlayerHealthSystem : HealthSystem
 {
@@ -12,6 +13,7 @@ public class PlayerHealthSystem : HealthSystem
 
     [SerializeField] public new Rigidbody2D rigidbody2D;
     [SerializeField] bool isDead;
+    [SerializeField] Slider healthSlider; 
 
     [SerializeField]
     private OnDeathEvent m_OnDeath = new OnDeathEvent();
