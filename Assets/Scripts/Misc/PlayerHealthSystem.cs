@@ -18,6 +18,12 @@ public class PlayerHealthSystem : HealthSystem
     [SerializeField]
     private OnDeathEvent m_OnDeath = new OnDeathEvent();
 
+    protected override void Start()
+    {
+        base.Start();
+        setSlider();
+    }
+
     protected override void Die()
     {
         if (!isDead)
@@ -36,8 +42,15 @@ public class PlayerHealthSystem : HealthSystem
         if (collision.transform.tag == "Enemy")
         {
             Damage(1f);
+            setSlider();
             Destroy(collision.gameObject);
         }
+    }
+
+    private void setSlider()
+    {
+        healthSlider.maxValue = baseHealth;
+        healthSlider.value = Health;
     }
 
     public OnDeathEvent onEffectStart
