@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ce78e6d81d5587e4da92c3991b1a9224
+guid: 257fd995b9138e042a3672805b7ad4d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shop-Sheet_0
+      name: shop-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06f0cfdc8cbd6ca4dbaa341c31474b95
-      internalID: 866827426
+      spriteID: 8b5e24695da12ee4cb15b3f38bcbbee4
+      internalID: -1682624727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop-Sheet_1
+      name: shop-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 128
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86ffa623f21ffdd43b840aff02a7320f
-      internalID: 1924238920
+      spriteID: 811dac46e658c08438881eff84d039b7
+      internalID: 628151281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop-Sheet_2
+      name: shop-Sheet 1_2
       rect:
         serializedVersion: 2
         x: 256
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d900c223dd4d4b6478bf2f3ade09ddc5
-      internalID: -622300710
+      spriteID: 51eb94761952c0046bc6f1f49ef52cc5
+      internalID: -1809230121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop-Sheet_3
+      name: shop-Sheet 1_3
       rect:
         serializedVersion: 2
         x: 0
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2210d895aa6317459fc6fd0386b5dc2
-      internalID: 2138992220
+      spriteID: f29936034e4fe594a9d451d07bb69646
+      internalID: -51399302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop-Sheet_4
+      name: shop-Sheet 1_4
       rect:
         serializedVersion: 2
         x: 128
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e00ae0594342499479797bce1e4d2527
-      internalID: -2734648
+      spriteID: e8de542827b2f834684443521d479725
+      internalID: 778248859
       vertices: []
       indices: 
       edges: []
@@ -222,11 +222,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shop-Sheet_4: -2734648
-      shop-Sheet_2: -622300710
-      shop-Sheet_1: 1924238920
-      shop-Sheet_0: 866827426
-      shop-Sheet_3: 2138992220
+      shop-Sheet 1_0: -1682624727
+      shop-Sheet 1_3: -51399302
+      shop-Sheet 1_1: 628151281
+      shop-Sheet 1_2: -1809230121
+      shop-Sheet 1_4: 778248859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
