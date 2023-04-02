@@ -5,11 +5,11 @@ using System;
 
 public class HealthSystem : MonoBehaviour, IDamageable
 {
-    [SerializeField] float baseHealth;
+    [SerializeField] protected float baseHealth;
 
     float currentHealth;
 
-    protected void Start()
+    protected virtual void Start()
     {
         Health = baseHealth;
     }
