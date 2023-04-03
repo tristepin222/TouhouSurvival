@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5960451725622377434, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960451725774136379, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5960451726042503794, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
       propertyPath: m_Color.a
       value: 0.5019608
@@ -114,6 +122,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5960451726042503794, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960451726166729742, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
