@@ -7,8 +7,9 @@ public class LootSystem : MonoBehaviour
     [SerializeField] GameObject loot;
     // Start is called before the first frame update
 
-    private void OnDestroyEvent()
+    private void OnDestroy()
     {
+        if (!this.gameObject.scene.isLoaded) return;
         GameObject currentLoot = Instantiate(loot);
         currentLoot.transform.position = transform.position;
     }
