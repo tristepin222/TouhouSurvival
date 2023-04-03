@@ -10,6 +10,7 @@ public class FightSystem : MonoBehaviour
     [SerializeField] GameObject menu;
     private int indexWeapon;
     private bool isFighting;
+    private bool menuShowed;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,11 @@ public class FightSystem : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Instantiate(menu);
+            if (!menuShowed)
+            {
+                menuShowed = true;
+                Instantiate(menu);
+            }
         }
         
     }
