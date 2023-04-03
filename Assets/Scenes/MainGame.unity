@@ -1957,6 +1957,7 @@ GameObject:
   - component: {fileID: 1343239807}
   - component: {fileID: 1343239806}
   - component: {fileID: 1343239805}
+  - component: {fileID: 1343239809}
   m_Layer: 5
   m_Name: Wave
   m_TagString: Untagged
@@ -2050,6 +2051,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1343239809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343239804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9fa90a89c56fa4aa9c13901bb23569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveValueText: {fileID: 697312783}
+  timeValueText: {fileID: 775957584}
+  baseTimeValue: 30
+  baseWaveValue: 0
 --- !u!1 &1403702038
 GameObject:
   m_ObjectHideFlags: 0
