@@ -17,5 +17,12 @@ public class LevelSystem : MonoBehaviour
         xp += amount;
         XPSlider.value = xp;
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out Loot loot))
+        {
+            addXP(1f);
+            Destroy(collision.gameObject);
+        }
+    }
 }
