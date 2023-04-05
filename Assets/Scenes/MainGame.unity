@@ -2181,6 +2181,10 @@ PrefabInstance:
       propertyPath: m_OnEffectStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2074734764}
+    - target: {fileID: 672112121276573449, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: XPSlider
+      value: 
+      objectReference: {fileID: 1403702040}
     - target: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Name
       value: Mokou
