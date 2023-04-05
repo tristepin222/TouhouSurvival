@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class PickUpSystem : MonoBehaviour
 {
-    [SerializeField] LevelSystem levelSystem;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "XPOrb")
+        if (collision.TryGetComponent(out Loot loot))
         {
-            levelSystem.addXP(1);
-            Destroy(collision.gameObject);
+            loot.MoveTowards();
         }
     }
 }
