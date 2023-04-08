@@ -5,7 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/UpgradeScriptableObject")]
 public class UpgradeScriptableObject : ScriptableObject
 {
-    public string UpgradeName;
-    public float UpgradeValue;
-    public string UpgradeDescription;
+    public string upgradeName;
+    public float upgradeValue;
+    public string upgradeDescription;
+    public Sprite upgradeSprite;
+    public int weight;
 }
