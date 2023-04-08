@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/cropScriptableObject")]
-public class UpgradeScriptableObject
+[CreateAssetMenu(menuName = "ScriptableObjects/UpgradeScriptableObject")]
+public class UpgradeScriptableObject : ScriptableObject
 {
     public string UpgradeName;
     public float UpgradeValue;
