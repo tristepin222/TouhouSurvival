@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62017fd4b6911b94bbaafe01527e4deb, type: 3}
   m_Name: Health
   m_EditorClassIdentifier: 
-  UpgradeName: Health
-  UpgradeValue: 5
-  UpgradeDescription: + 5 Health
+  upgradeName: Health
+  upgradeValue: 5
+  upgradeDescription: +5 Health
+  upgradeSprite: {fileID: 0}
+  weight: 100
