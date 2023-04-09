@@ -8,25 +8,28 @@ public class UpgradeSystem : MonoBehaviour
     [SerializeField] GameObject[] images;
     [SerializeField] UpgradeScriptableObject[] upgradeScriptableObjects;
 
-    private UpgradeScriptableObject[] selectedPool = new UpgradeScriptableObject[4] ;
+    private UpgradeScriptableObject[] selectedPool = new UpgradeScriptableObject[5] ;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(CheckWeight());
     }
-    private IEnumerator CheckWeight()
+    private IEnumerator CheckWeight(float penality = 0)
     {
         int i = 0;
         float weightTotal = CalculateWeightTotal();
-        float random = Random.Range(0, weightTotal);
+        float random = Random.Range(0, weightTotal-penality);
         foreach (UpgradeScriptableObject upgradeScriptableObject in upgradeScriptableObjects)
         {
 
             if (random <= upgradeScriptableObject.weight)
             {
-                if(i <= images.Length)
+                if(i <= selectedPool.Length)
                 {
-                    selectedPool[i] = upgradeScriptableObject;
+                    if (selectedPool[i] == null)
+                    {
+                        selectedPool[i] = upgradeScriptableObject;
+                    }
                 }
                 i++;
             }
@@ -35,8 +38,21 @@ public class UpgradeSystem : MonoBehaviour
                 random -= upgradeScriptableObject.weight;
             }
         }
-        StartCoroutine(showUpgrades());
+
+        StartCoroutine(CheckEmpty());
         yield return 0;
+    }
+    private IEnumerator CheckEmpty()
+    {
+        for(int i = 0; i < selectedPool.Length; i++)
+        {
+            if(selectedPool[i] == null)
+            {
+                StartCoroutine(CheckWeight(500));
+                yield break;
+            }
+        }
+        StartCoroutine(ShowUpgrades());
     }
 
     private float CalculateWeightTotal()
@@ -48,13 +64,14 @@ public class UpgradeSystem : MonoBehaviour
         }
         return weightTotal;
     }
-    private IEnumerator showUpgrades()
+    private IEnumerator ShowUpgrades()
     {
         int i = 0;
         foreach(UpgradeScriptableObject upgradeScriptableObject in selectedPool)
         {
             images[i].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = upgradeScriptableObject.upgradeName;
             images[i].transform.Find("Image").GetComponent<Image>().sprite = upgradeScriptableObject.upgradeSprite;
+            images[i].transform.Find("Image").GetComponent<Image>().color = upgradeScriptableObject.upgradeColor;
             images[i].transform.Find("Description").GetComponent<TextMeshProUGUI>().text = upgradeScriptableObject.upgradeDescription;
             i++;
         }
