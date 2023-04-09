@@ -9,5 +9,6 @@ public class UpgradeScriptableObject : ScriptableObject
     public float upgradeValue;
     public string upgradeDescription;
     public Sprite upgradeSprite;
+    public Color upgradeColor;
     public int weight;
 }
