@@ -77,4 +77,14 @@ public class UpgradeSystem : MonoBehaviour
         }
         yield return 0;
     }
+
+    public void Buy()
+    {
+        int i = 0;
+        foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
+        {
+            images[i].gameObject.SetActive(false);
+            i++;
+        }
+    }
 }
