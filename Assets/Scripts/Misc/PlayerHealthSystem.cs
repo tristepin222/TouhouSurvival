@@ -20,6 +20,7 @@ public class PlayerHealthSystem : HealthSystem
 
     protected override void Start()
     {
+        baseHealth += GlobalController.Instance.bonusHealthAmount;
         base.Start();
         setSlider();
     }
