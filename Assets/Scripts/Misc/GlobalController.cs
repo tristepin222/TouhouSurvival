@@ -5,7 +5,8 @@ using UnityEngine;
 public class GlobalController : MonoBehaviour
 {
     public static GlobalController Instance;
-    public float healthAmount;
+    public float bonusHealthAmount;
+    public int level;
     // Start is called before the first frame update
     void Start()
     {
