@@ -15,5 +15,6 @@ MonoBehaviour:
   upgradeName: Health
   upgradeValue: 5
   upgradeDescription: +5 Health
-  upgradeSprite: {fileID: 0}
+  upgradeSprite: {fileID: 21300000, guid: c0cd883db137b15428546d77de8383f0, type: 3}
+  upgradeColor: {r: 0.10062516, g: 1, b: 0, a: 1}
   weight: 100
