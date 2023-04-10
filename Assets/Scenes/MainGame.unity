@@ -2185,6 +2185,10 @@ PrefabInstance:
       propertyPath: XPSlider
       value: 
       objectReference: {fileID: 1403702040}
+    - target: {fileID: 672112121276573449, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: MaxXPAmount
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6040287386948589632, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_Name
       value: Mokou

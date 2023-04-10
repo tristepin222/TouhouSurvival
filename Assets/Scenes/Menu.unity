@@ -1408,7 +1408,7 @@ GameObject:
   - component: {fileID: 84896117}
   - component: {fileID: 84896116}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GlobalController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b19f2c7c9c0f26469bd2087b3f91fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmount: 0
+  bonusHealthAmount: 0
 --- !u!4 &84896117
 Transform:
   m_ObjectHideFlags: 0
