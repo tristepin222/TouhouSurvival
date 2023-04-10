@@ -78,8 +78,16 @@ public class UpgradeSystem : MonoBehaviour
         yield return 0;
     }
 
-    public void Buy()
+    public void Buy(int upgradeIndex)
     {
+        switch(selectedPool[upgradeIndex].upgradeName)
+        {
+            default:
+                break;
+            case "Health":
+                GlobalController.Instance.bonusHealthAmount += selectedPool[upgradeIndex].upgradeValue;
+                break;
+        }
         int i = 0;
         foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
         {
