@@ -20,6 +20,7 @@ public class LevelSystem : MonoBehaviour
         {
             xp = 0;
             GlobalController.Instance.level++;
+            GlobalController.Instance.levelToUpgrade++;
             CalculateNewMaxAmount();
         }
         xp += amount;
