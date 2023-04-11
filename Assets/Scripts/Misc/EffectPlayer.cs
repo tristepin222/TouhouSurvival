@@ -50,6 +50,7 @@ public class EffectPlayer : MonoBehaviour
 
     public void PlayAnimation()
     {
+        animator.enabled = true;
         if (isCentered)
         {
             this.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
