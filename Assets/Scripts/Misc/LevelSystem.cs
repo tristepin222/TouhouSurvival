@@ -8,7 +8,7 @@ public class LevelSystem : MonoBehaviour
     [SerializeField] float MaxXPAmount;
     private float xp;
 
-    private const float RATIO = 1f;
+    private const float RATIO = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,7 @@ public class LevelSystem : MonoBehaviour
     }
     private void CalculateNewMaxAmount()
     {
-        XPSlider.maxValue = MaxXPAmount * (GlobalController.Instance.level + 1 * (RATIO*(GlobalController.Instance.level+1/2)));
+        XPSlider.maxValue = (GlobalController.Instance.level+1 * GlobalController.Instance.level + 1) / (RATIO * RATIO);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
