@@ -27,7 +27,7 @@ public class LevelSystem : MonoBehaviour
     }
     private void CalculateNewMaxAmount()
     {
-        XPSlider.maxValue = MaxXPAmount * (GlobalController.Instance.level + 1 * RATIO);
+        XPSlider.maxValue = MaxXPAmount * (GlobalController.Instance.level + 1 * (RATIO*(GlobalController.Instance.level+1/2)));
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
