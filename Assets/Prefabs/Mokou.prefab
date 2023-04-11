@@ -408,6 +408,7 @@ MonoBehaviour:
   damage: 1
   trackMouse: 1
   player: {fileID: 6040287386948589632}
+  attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
       m_Calls:
@@ -1333,6 +1334,7 @@ MonoBehaviour:
   - {fileID: 1475409604}
   - {fileID: 1475409603}
   menu: {fileID: 1943672085778378894, guid: 3630c7afdb16f324aa687f267327b045, type: 3}
+  attackSpeedRation: 1
 --- !u!114 &2038319217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1692,6 +1694,7 @@ MonoBehaviour:
   damage: 1
   trackMouse: 1
   player: {fileID: 6040287386948589632}
+  attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
       m_Calls:
