@@ -31,7 +31,7 @@ public class RandomSPawn : MonoBehaviour
         isChecking = true;
         float weightTotal = CalculateWeightTotal();
         float random = Random.Range(0, weightTotal);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         foreach (ObjectSpawn objectSpawn in objectSpawns)
         {
             
