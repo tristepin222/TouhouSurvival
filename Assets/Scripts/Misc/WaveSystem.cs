@@ -25,13 +25,16 @@ public class WaveSystem : MonoBehaviour
     private void setTime()
     {
         timeValue--;
-        timeValueText.text = timeValue.ToString();
-        if (timeValue == 0)
+        if (timeValue < 0)
         {
             if (!collecting)
             {
                 StartCoroutine(CollectAllXp());
             }
+        }
+        else
+        {
+            timeValueText.text = timeValue.ToString();
         }
     }
 
