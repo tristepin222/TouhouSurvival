@@ -12,7 +12,11 @@ public class UpgradeSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(CheckWeight());
+        if (GlobalController.Instance.levelToUpgrade > 0)
+        {
+            GlobalController.Instance.levelToUpgrade--;
+            StartCoroutine(CheckWeight());
+        }
     }
     private IEnumerator CheckWeight(float penality = 0)
     {
@@ -93,6 +97,11 @@ public class UpgradeSystem : MonoBehaviour
         {
             images[i].gameObject.SetActive(false);
             i++;
+        }
+        if (GlobalController.Instance.levelToUpgrade > 0)
+        {
+            GlobalController.Instance.levelToUpgrade--;
+            StartCoroutine(CheckWeight());
         }
     }
 }
