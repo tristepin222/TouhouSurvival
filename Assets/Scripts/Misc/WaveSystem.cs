@@ -13,6 +13,7 @@ public class WaveSystem : MonoBehaviour
     [SerializeField] string sceneName;
     private float timeValue;
     private float waveValue;
+    private bool collecting;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +26,30 @@ public class WaveSystem : MonoBehaviour
     {
         timeValue--;
         timeValueText.text = timeValue.ToString();
-        if(timeValue == 0)
+        if (timeValue == 0)
         {
-            SceneManager.LoadScene(sceneName);
+            if (!collecting)
+            {
+                StartCoroutine(CollectAllXp());
+            }
         }
+    }
+
+    private IEnumerator CollectAllXp()
+    {
+        collecting = true;
+        Loot[] loots = FindObjectsOfType<Loot>();
+        foreach (Loot loot in loots)
+        {
+            loot.MoveTowards();
+        }
+        yield return new WaitForSeconds(3f);
+        StartCoroutine(Teleport());
+
+    }
+    private IEnumerator Teleport()
+    {
+        SceneManager.LoadScene(sceneName);
+        yield return 0;
     }
 }

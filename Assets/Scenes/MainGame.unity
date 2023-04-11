@@ -2170,6 +2170,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: baseHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 112723148}
