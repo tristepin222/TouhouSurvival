@@ -12,7 +12,7 @@ public class FightSystem : MonoBehaviour
     private bool isFighting;
     private bool menuShowed;
     private GameObject[] enemies;
-    private float maxDistance = 10f;
+    private float maxDistance = 1.5f;
 
     public float attackSpeedRation = 1.0f;
     // Start is called before the first frame update
