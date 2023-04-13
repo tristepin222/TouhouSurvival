@@ -8,7 +8,7 @@ public class LevelSystem : MonoBehaviour
     [SerializeField] float MaxXPAmount;
     private float xp;
 
-    private const float RATIO = 0.3f;
+    private const float RATIO = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
