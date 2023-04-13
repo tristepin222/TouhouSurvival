@@ -20,6 +20,7 @@ public class PlayerHealthSystem : HealthSystem
 
     protected override void Start()
     {
+        GlobalController.Instance.isDead = false;
         baseHealth += GlobalController.Instance.bonusHealthAmount;
         base.Start();
         setSlider();
@@ -36,6 +37,7 @@ public class PlayerHealthSystem : HealthSystem
             rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
             m_OnDeath.Invoke();
             isDead = true;
+            GlobalController.Instance.isDead = true;
         }
     }
     protected override void OnCollisionEnter2D(Collision2D collision)
