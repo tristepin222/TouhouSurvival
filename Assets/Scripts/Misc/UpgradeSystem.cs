@@ -21,6 +21,12 @@ public class UpgradeSystem : MonoBehaviour
     private IEnumerator CheckWeight(float penality = 0)
     {
         int i = 0;
+        foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
+        {
+            images[i].gameObject.SetActive(true);
+            i++;
+        }
+        i = 0;
         float weightTotal = CalculateWeightTotal();
         float random = Random.Range(0, weightTotal-penality);
         foreach (UpgradeScriptableObject upgradeScriptableObject in upgradeScriptableObjects)
