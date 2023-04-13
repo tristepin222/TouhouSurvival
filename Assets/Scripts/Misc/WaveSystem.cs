@@ -29,7 +29,10 @@ public class WaveSystem : MonoBehaviour
         {
             if (!collecting)
             {
-                StartCoroutine(CollectAllXp());
+                if (!GlobalController.Instance.isDead)
+                {
+                    StartCoroutine(CollectAllXp());
+                }
             }
         }
         else
