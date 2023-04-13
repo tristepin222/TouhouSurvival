@@ -12,69 +12,62 @@ public class Weapon : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] bool trackMouse;
     [SerializeField] GameObject player;
+    [SerializeField] Transform child;
     private bool canAttack = true;
 
     [Serializable]
     public class OnAttackEvent : UnityEvent { }
     [Serializable]
     public class OnResetEvent : UnityEvent { }
+    public float attackSpeed = 1.0f;
 
     [SerializeField]
     private OnAttackEvent m_OnAttack = new OnAttackEvent();
     [SerializeField]
     private OnResetEvent m_OnReset = new OnResetEvent();
+    private float speed = 5.0f;
+    private Transform enemy;
+    private bool canMove;
+    private Vector3 basePos;
 
     private void Start()
     {
         Damage = damage;
+        basePos = child.position;
     }
     public int Damage{ get; set; }
 
     private void Update()
     {
-        if (canAttack) 
-        { 
-            if (trackMouse)
+        if (canAttack)
+        {
+            if (enemy == null)
             {
-                CalculateRotation();
+                canMove = false;
+            }
+            if (canMove)
+            {
+                child.rotation = new Quaternion(0, 0, Quaternion.LookRotation(Vector3.RotateTowards(child.position, enemy.position - new Vector3(0, 0.3f), speed * 100 * Time.deltaTime, 0f)).z, 0);
+                child.position = Vector3.MoveTowards(child.position, enemy.position - new Vector3(0, 0.3f), speed * Time.deltaTime);
+
             }
             else
             {
-                CalculateRotationFromMouse();
+                if (child.position != basePos)
+                {
+                    child.rotation = new Quaternion(0, 0, Quaternion.LookRotation(Vector3.RotateTowards(child.position, Vector3.zero, speed * 100 * Time.deltaTime, 0f)).z, 0);
+                    child.localPosition = Vector3.MoveTowards(child.localPosition, Vector3.zero, speed * Time.deltaTime);
+                }
             }
         }
     }
 
-    private void CalculateRotation()
+    public void Attack(Transform enemy)
     {
-        Vector3 vector3 = Camera.main.WorldToScreenPoint(player.transform.position);
-        vector3 = Input.mousePosition - vector3;
-        float angle = Mathf.Atan2(vector3.y, vector3.x) * Mathf.Rad2Deg;
-
-        this.transform.position = player.transform.position;
-        transform.position = new Vector2(transform.position.x, transform.position.y - 0.07f);
-        this.transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        this.enemy = enemy;
+        canMove = true;
+        m_OnAttack.Invoke();
     }
-
-    private void CalculateRotationFromMouse()
-    {
-        Vector3 mousePosition = Input.mousePosition;
-        Vector3 objectPosition = Camera.main.WorldToScreenPoint(transform.position);
-        mousePosition.z = 0;
-        mousePosition -= objectPosition;
-        float angle = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
-    }
-    public void Attack()
-    {
-        if (canAttack)
-        {
-            trackMouse = false;
-            m_OnAttack.Invoke();
-        }
-    }
-
-
     public IEnumerator ResetAnimation()
     {
         yield return 0;
@@ -85,6 +78,8 @@ public class Weapon : MonoBehaviour
     public void Hit(HealthSystem healthSystem)
     {
         healthSystem.Damage(Damage);
+        m_OnReset.Invoke();
+        canMove = false;
     }
 
     public void Disable()

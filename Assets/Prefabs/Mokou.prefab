@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 1988587615}
   - component: {fileID: 1988587617}
   - component: {fileID: 1988587616}
+  - component: {fileID: 2076429253}
   m_Layer: 0
   m_Name: Effects
   m_TagString: Untagged
@@ -275,6 +276,26 @@ VFXRenderer:
   m_SortingLayerID: -833376193
   m_SortingLayer: 1
   m_SortingOrder: 0
+--- !u!95 &2076429253
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988587614}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5070263e347c91c4b93c9bb490b84d85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &490546947523203000
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +390,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2062921746642571541}
   - component: {fileID: 1475409603}
-  - component: {fileID: 1475409606}
   m_Layer: 0
   m_Name: RHandParent
   m_TagString: Untagged
@@ -408,22 +428,11 @@ MonoBehaviour:
   damage: 1
   trackMouse: 1
   player: {fileID: 6040287386948589632}
+  child: {fileID: 3739358204672394011}
   attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475409606}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: RHA
-          m_BoolArgument: 0
-        m_CallState: 1
       - m_Target: {fileID: 1799518174}
         m_TargetAssemblyTypeName: UnityEngine.VFX.VisualEffect, UnityEngine
         m_MethodName: SendEvent
@@ -475,26 +484,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
---- !u!95 &1475409606
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005885910233657754}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e4952ad3bd2b1d4eb016556bf5a72d4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1524720032627157255
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   XPSlider: {fileID: 0}
-  MaxXPAmount: 2
+  MaxXPAmount: 10
 --- !u!70 &237487793549034153
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -876,7 +865,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1970767856, guid: 041dbd843d2c450469809b343b645864, type: 3}
+  m_Sprite: {fileID: -687356303, guid: 041dbd843d2c450469809b343b645864, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -960,7 +949,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -267709638, guid: 041dbd843d2c450469809b343b645864, type: 3}
+  m_Sprite: {fileID: 1475240540, guid: 041dbd843d2c450469809b343b645864, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1012,6 +1001,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1988587615}
   - {fileID: 4020072309118804451}
   - {fileID: 9027585305992771383}
   - {fileID: 1855964815735973642}
@@ -1021,7 +1011,6 @@ Transform:
   - {fileID: 1518705528}
   - {fileID: 2823549869887084678}
   - {fileID: 2062921746642571541}
-  - {fileID: 1988587615}
   - {fileID: 981413766}
   - {fileID: 3915195217846567028}
   m_Father: {fileID: 0}
@@ -1040,7 +1029,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 5c5a2e7b448884e469ae19a316297474, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 1
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1334,7 +1323,7 @@ MonoBehaviour:
   - {fileID: 1475409604}
   - {fileID: 1475409603}
   menu: {fileID: 1943672085778378894, guid: 3630c7afdb16f324aa687f267327b045, type: 3}
-  attackSpeedRation: 1
+  attackSpeedRation: 1.2
 --- !u!114 &2038319217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb44553a33b3e74cb56fcc3a839ed66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 2
+  baseHealth: 10
   rigidbody2D: {fileID: 1099821227}
   isDead: 0
   healthSlider: {fileID: 0}
@@ -1402,7 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 651a0306e7aa61341b0d6c4660b7f6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1099821224}
+  animator: {fileID: 2076429253}
   visualEffect: {fileID: 1988587617}
   deaths:
   - eventName: 
@@ -1634,7 +1623,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1934362284, guid: 041dbd843d2c450469809b343b645864, type: 3}
+  m_Sprite: {fileID: 1543064062, guid: 041dbd843d2c450469809b343b645864, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1655,7 +1644,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2823549869887084678}
   - component: {fileID: 1475409604}
-  - component: {fileID: 1475409607}
   m_Layer: 0
   m_Name: LhandParent
   m_TagString: Untagged
@@ -1694,22 +1682,11 @@ MonoBehaviour:
   damage: 1
   trackMouse: 1
   player: {fileID: 6040287386948589632}
+  child: {fileID: 1213365138092278048}
   attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475409607}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: LHA
-          m_BoolArgument: 0
-        m_CallState: 1
       - m_Target: {fileID: 1537119100}
         m_TargetAssemblyTypeName: UnityEngine.VFX.VisualEffect, UnityEngine
         m_MethodName: SendEvent
@@ -1761,26 +1738,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
---- !u!95 &1475409607
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017266944362165950}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e4952ad3bd2b1d4eb016556bf5a72d4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &7019013356980756831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2161,7 +2118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2048765675, guid: 041dbd843d2c450469809b343b645864, type: 3}
+  m_Sprite: {fileID: 1174217802, guid: 041dbd843d2c450469809b343b645864, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
