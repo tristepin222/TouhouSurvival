@@ -12,10 +12,13 @@ public class LevelSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        xp = GlobalController.Instance.xp;
+        XPSlider.value = xp;
         CalculateNewMaxAmount();
     }
     public void addXP(float amount)
     {
+        GlobalController.Instance.xp += amount;
         if (xp >= MaxXPAmount)
         {
             xp = 0;
