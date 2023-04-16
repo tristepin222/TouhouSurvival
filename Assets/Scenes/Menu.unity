@@ -1427,6 +1427,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonusHealthAmount: 0
+  level: 0
+  levelToUpgrade: 0
+  xp: 0
+  isDead: 0
 --- !u!4 &84896117
 Transform:
   m_ObjectHideFlags: 0
