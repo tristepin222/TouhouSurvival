@@ -8,6 +8,7 @@ public class UpgradeSystem : MonoBehaviour
 {
     [SerializeField] GameObject[] images;
     [SerializeField] UpgradeScriptableObject[] upgradeScriptableObjects;
+    [SerializeField] RarityColour[] rarityColours;
 
     private UpgradeScriptableObject[] selectedPool = new UpgradeScriptableObject[5];
     // Start is called before the first frame update
@@ -51,7 +52,7 @@ public class UpgradeSystem : MonoBehaviour
             }
             else
             {
-                random -= upgradeScriptableObject.weight/15;
+                random -= upgradeScriptableObject.weight/20;
             }
         }
 
@@ -85,10 +86,32 @@ public class UpgradeSystem : MonoBehaviour
         int i = 0;
         foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
         {
-            images[i].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = upgradeScriptableObject.upgradeName;
-            images[i].transform.Find("Image").GetComponent<Image>().sprite = upgradeScriptableObject.upgradeSprite;
+            TextMeshProUGUI name = images[i].transform.Find("Name").GetComponent<TextMeshProUGUI>();
+            Image imageSprite = images[i].transform.Find("Image").GetComponent<Image>();
+            Image image = images[i].GetComponent<Image>();
             images[i].transform.Find("Image").GetComponent<Image>().color = upgradeScriptableObject.upgradeColor;
             images[i].transform.Find("Description").GetComponent<TextMeshProUGUI>().text = upgradeScriptableObject.upgradeDescription;
+            imageSprite.sprite = upgradeScriptableObject.upgradeSprite;
+            name.text = upgradeScriptableObject.upgradeName;
+            switch (upgradeScriptableObject.rarity)
+            {
+                case 0:
+                    image.color = rarityColours[0].imageColor;
+                    name.color = rarityColours[0].textColor;
+                    break;
+                case 1:
+                    image.color = rarityColours[1].imageColor;
+                    name.color = rarityColours[1].textColor;
+                    break;
+                case 2:
+                    image.color = rarityColours[2].imageColor;
+                    name.color = rarityColours[2].textColor;
+                    break;
+                case 3:
+                    image.color = rarityColours[3].imageColor;
+                    name.color = rarityColours[3].textColor;
+                    break;
+            }
             i++;
         }
         yield return 0;
