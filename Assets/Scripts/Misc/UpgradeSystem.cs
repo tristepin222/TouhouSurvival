@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 public class UpgradeSystem : MonoBehaviour
 {
     [SerializeField] GameObject[] images;
     [SerializeField] UpgradeScriptableObject[] upgradeScriptableObjects;
 
-    private UpgradeScriptableObject[] selectedPool = new UpgradeScriptableObject[5] ;
+    private UpgradeScriptableObject[] selectedPool = new UpgradeScriptableObject[5];
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,10 @@ public class UpgradeSystem : MonoBehaviour
         {
             GlobalController.Instance.levelToUpgrade--;
             StartCoroutine(CheckWeight());
+        }
+        else
+        {
+            StartCoroutine(HideUpgrades());
         }
     }
     private IEnumerator CheckWeight(float penality = 0)
@@ -28,13 +33,13 @@ public class UpgradeSystem : MonoBehaviour
         }
         i = 0;
         float weightTotal = CalculateWeightTotal();
-        float random = Random.Range(0, weightTotal-penality);
+        float random = UnityEngine.Random.Range(0, weightTotal - penality);
         foreach (UpgradeScriptableObject upgradeScriptableObject in upgradeScriptableObjects)
         {
 
             if (random <= upgradeScriptableObject.weight)
             {
-                if(i <= selectedPool.Length)
+                if (i < selectedPool.Length)
                 {
                     if (selectedPool[i] == null)
                     {
@@ -42,10 +47,11 @@ public class UpgradeSystem : MonoBehaviour
                     }
                 }
                 i++;
+
             }
             else
             {
-                random -= upgradeScriptableObject.weight;
+                random -= upgradeScriptableObject.weight/15;
             }
         }
 
@@ -54,11 +60,11 @@ public class UpgradeSystem : MonoBehaviour
     }
     private IEnumerator CheckEmpty()
     {
-        for(int i = 0; i < selectedPool.Length; i++)
+        for (int i = 0; i < selectedPool.Length; i++)
         {
-            if(selectedPool[i] == null)
+            if (selectedPool[i] == null)
             {
-                StartCoroutine(CheckWeight(500));
+                StartCoroutine(CheckWeight());
                 yield break;
             }
         }
@@ -77,7 +83,7 @@ public class UpgradeSystem : MonoBehaviour
     private IEnumerator ShowUpgrades()
     {
         int i = 0;
-        foreach(UpgradeScriptableObject upgradeScriptableObject in selectedPool)
+        foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
         {
             images[i].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = upgradeScriptableObject.upgradeName;
             images[i].transform.Find("Image").GetComponent<Image>().sprite = upgradeScriptableObject.upgradeSprite;
@@ -87,23 +93,36 @@ public class UpgradeSystem : MonoBehaviour
         }
         yield return 0;
     }
-
-    public void Buy(int upgradeIndex)
+    private IEnumerator HideUpgrades()
     {
-        switch(selectedPool[upgradeIndex].upgradeName)
-        {
-            default:
-                break;
-            case "Health":
-                GlobalController.Instance.bonusHealthAmount += selectedPool[upgradeIndex].upgradeValue;
-                break;
-        }
         int i = 0;
         foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
         {
             images[i].gameObject.SetActive(false);
             i++;
         }
+        yield return 0;
+    }
+    public void Buy(int upgradeIndex)
+    {
+        switch (selectedPool[upgradeIndex].upgradeName)
+        {
+            default:
+                break;
+            case "Health":
+                GlobalController.Instance.bonusHealthAmount += selectedPool[upgradeIndex].upgradeValue;
+                break;
+            case "Damage":
+                GlobalController.Instance.bonusDamage += selectedPool[upgradeIndex].upgradeValue;
+                break;
+            case "AttackSpeed":
+                GlobalController.Instance.bonusAttackSpeed += selectedPool[upgradeIndex].upgradeValue;
+                break;
+            case "Range":
+                GlobalController.Instance.bonusRange += selectedPool[upgradeIndex].upgradeValue;
+                break;
+        }
+        StartCoroutine(HideUpgrades());
         if (GlobalController.Instance.levelToUpgrade > 0)
         {
             GlobalController.Instance.levelToUpgrade--;
