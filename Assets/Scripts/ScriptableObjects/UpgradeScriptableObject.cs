@@ -11,4 +11,5 @@ public class UpgradeScriptableObject : ScriptableObject
     public Sprite upgradeSprite;
     public Color upgradeColor;
     public int weight;
+    public int rarity;
 }
