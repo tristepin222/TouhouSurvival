@@ -12,7 +12,7 @@ public class FightSystem : MonoBehaviour
     private bool isFighting;
     private bool menuShowed;
     private GameObject[] enemies;
-    private float maxDistance = 1.5f;
+    private float maxDistance = 1.5f+(GlobalController.Instance.bonusRange/10);
 
     public float attackSpeedRation = 1.0f;
     // Start is called before the first frame update
@@ -50,7 +50,7 @@ public class FightSystem : MonoBehaviour
         {
             weapons[indexWeapon].Attack(enemy);
         }
-        yield return new WaitForSeconds(weapons[indexWeapon].attackSpeed/attackSpeedRation);
+        yield return new WaitForSeconds(weapons[indexWeapon].attackSpeed/attackSpeedRation/(GlobalController.Instance.bonusAttackSpeed/100+1));
         indexWeapon++;
         isFighting = false;
     }
