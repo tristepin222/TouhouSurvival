@@ -47,7 +47,7 @@ public class Weapon : MonoBehaviour
             }
             if (canMove)
             {
-                child.rotation = new Quaternion(0, 0, Quaternion.LookRotation(Vector3.RotateTowards(child.position, enemy.position - new Vector3(0, 0.3f), speed * 100 * Time.deltaTime, 0f)).z, 0);
+                child.rotation = new Quaternion(0, 0, Quaternion.LookRotation(Vector3.RotateTowards(child.position, enemy.position - new Vector3(0, 0.3f), speed * 100 * Time.deltaTime * attackSpeed, 0f)).z, 0);
                 child.position = Vector3.MoveTowards(child.position, enemy.position - new Vector3(0, 0.3f), speed * Time.deltaTime);
 
             }
@@ -77,7 +77,7 @@ public class Weapon : MonoBehaviour
 
     public void Hit(HealthSystem healthSystem)
     {
-        healthSystem.Damage(Damage *(GlobalController.Instance.bonusAttackSpeed / 100 + 1));
+        healthSystem.Damage(Damage *(GlobalController.Instance.bonusDamage / 100 + 1));
         m_OnReset.Invoke();
         canMove = false;
     }
