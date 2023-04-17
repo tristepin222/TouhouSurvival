@@ -77,7 +77,7 @@ public class Weapon : MonoBehaviour
 
     public void Hit(HealthSystem healthSystem)
     {
-        healthSystem.Damage(Damage);
+        healthSystem.Damage(Damage *(GlobalController.Instance.bonusAttackSpeed / 100 + 1));
         m_OnReset.Invoke();
         canMove = false;
     }
