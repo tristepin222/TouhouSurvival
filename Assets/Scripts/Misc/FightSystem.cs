@@ -50,7 +50,7 @@ public class FightSystem : MonoBehaviour
         {
             weapons[indexWeapon].Attack(enemy);
         }
-        yield return new WaitForSeconds(weapons[indexWeapon].attackSpeed/attackSpeedRation/(GlobalController.Instance.bonusAttackSpeed/100+1));
+        yield return new WaitForSeconds(attackSpeedRation/(GlobalController.Instance.bonusAttackSpeed/100+1));
         indexWeapon++;
         isFighting = false;
     }
