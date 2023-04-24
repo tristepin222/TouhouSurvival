@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe0127adc7e1f843a984d8a0ed1f1f2, type: 3}
+  m_Name: Fist
+  m_EditorClassIdentifier: 
+  itemName: Mokou's Fist
+  itemType: Hands
+  itemValues: []
+  itemInfos:
+  - damageInfo: Damage
+    damageValue: 5
+  - damageInfo: Range
+    damageValue: 1
+  itemSprite:
+  - {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  itemColours: []
+  weight: 20
+  rarity: 0
+  scaleX: 1.2
+  scaleY: 1.2
