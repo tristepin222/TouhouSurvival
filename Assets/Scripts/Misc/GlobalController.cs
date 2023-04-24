@@ -14,6 +14,11 @@ public class GlobalController : MonoBehaviour
     public float xp;
     public bool isDead;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        bonusDamage += 1;
+        bonusAttackSpeed += 1;
+    }
     void Start()
     {
         if (Instance == null)
