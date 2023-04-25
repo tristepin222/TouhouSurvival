@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fe0127adc7e1f843a984d8a0ed1f1f2, type: 3}
-  m_Name: GhostBlade
+  m_Name: "L\xE6vateinn"
   m_EditorClassIdentifier: 
-  itemName: Youmu's ghostblade
+  itemName: "Flandre's L\xE6vateinn"
   itemType: Blade
   itemValues:
   - 4
@@ -22,8 +22,8 @@ MonoBehaviour:
   - damageInfo: Range
     damageValue: 20
   itemSprite:
-  - {fileID: -1262266357, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
-  - {fileID: -94905873, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  - {fileID: 1770463298, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  - {fileID: -947855893, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   - {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemColours: []
   weight: 20

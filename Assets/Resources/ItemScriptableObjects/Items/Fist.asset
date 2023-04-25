@@ -25,5 +25,5 @@ MonoBehaviour:
   itemColours: []
   weight: 20
   rarity: 0
-  scaleX: 1.2
-  scaleY: 1.2
+  scaleX: 0.6
+  scaleY: 0.6

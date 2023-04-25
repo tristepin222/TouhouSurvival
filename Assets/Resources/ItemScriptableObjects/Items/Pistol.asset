@@ -10,23 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fe0127adc7e1f843a984d8a0ed1f1f2, type: 3}
-  m_Name: GhostBlade
+  m_Name: Pistol
   m_EditorClassIdentifier: 
-  itemName: Youmu's ghostblade
-  itemType: Blade
-  itemValues:
-  - 4
+  itemName: Reisen's pistol
+  itemType: Hands
+  itemValues: []
   itemInfos:
   - damageInfo: Damage
-    damageValue: 10
+    damageValue: 5
   - damageInfo: Range
-    damageValue: 20
+    damageValue: 1
   itemSprite:
-  - {fileID: -1262266357, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
-  - {fileID: -94905873, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
-  - {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  - {fileID: -256896591, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  - {fileID: 1999471059, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemColours: []
   weight: 20
   rarity: 0
-  scaleX: 0.8
-  scaleY: 0.8
+  scaleX: 0.6
+  scaleY: 0.6
