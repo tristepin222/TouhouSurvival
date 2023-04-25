@@ -103,6 +103,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -110,10 +122,10 @@ TextureImporter:
       name: weapons-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 96
-        height: 64
+        x: 35
+        y: 220
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +143,10 @@ TextureImporter:
       name: weapons-Sheet_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
-        width: 96
-        height: 64
+        x: 97
+        y: 219
+        width: 91
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +164,10 @@ TextureImporter:
       name: weapons-Sheet_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 96
-        height: 64
+        x: 193
+        y: 219
+        width: 91
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +185,10 @@ TextureImporter:
       name: weapons-Sheet_3
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
-        width: 96
-        height: 64
+        x: 302
+        y: 214
+        width: 76
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +206,10 @@ TextureImporter:
       name: weapons-Sheet_4
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
-        width: 96
-        height: 64
+        x: 398
+        y: 214
+        width: 76
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +227,10 @@ TextureImporter:
       name: weapons-Sheet_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 96
-        height: 64
+        x: 36
+        y: 149
+        width: 56
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +248,10 @@ TextureImporter:
       name: weapons-Sheet_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
-        width: 96
-        height: 64
+        x: 132
+        y: 154
+        width: 56
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +269,10 @@ TextureImporter:
       name: weapons-Sheet_7
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 96
-        height: 64
+        x: 234
+        y: 149
+        width: 44
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +290,10 @@ TextureImporter:
       name: weapons-Sheet_8
       rect:
         serializedVersion: 2
-        x: 288
-        y: 128
-        width: 96
-        height: 64
+        x: 324
+        y: 154
+        width: 56
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +311,10 @@ TextureImporter:
       name: weapons-Sheet_9
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
-        width: 96
-        height: 64
+        x: 417
+        y: 156
+        width: 51
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,10 +332,10 @@ TextureImporter:
       name: weapons-Sheet_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 96
-        height: 64
+        x: 59
+        y: 68
+        width: 10
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +353,10 @@ TextureImporter:
       name: weapons-Sheet_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 96
-        height: 64
+        x: 129
+        y: 93
+        width: 51
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,10 +374,10 @@ TextureImporter:
       name: weapons-Sheet_12
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 96
-        height: 64
+        x: 227
+        y: 92
+        width: 19
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +395,10 @@ TextureImporter:
       name: weapons-Sheet_13
       rect:
         serializedVersion: 2
-        x: 288
-        y: 64
-        width: 96
-        height: 64
+        x: 323
+        y: 94
+        width: 19
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,10 +416,10 @@ TextureImporter:
       name: weapons-Sheet_14
       rect:
         serializedVersion: 2
-        x: 384
-        y: 64
-        width: 96
-        height: 64
+        x: 417
+        y: 92
+        width: 63
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +437,10 @@ TextureImporter:
       name: weapons-Sheet_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 64
+        x: 33
+        y: 30
+        width: 63
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,10 +458,10 @@ TextureImporter:
       name: weapons-Sheet_16
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 96
-        height: 64
+        x: 129
+        y: 28
+        width: 44
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +479,10 @@ TextureImporter:
       name: weapons-Sheet_17
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 96
-        height: 64
+        x: 225
+        y: 28
+        width: 44
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,10 +500,10 @@ TextureImporter:
       name: weapons-Sheet_18
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
-        width: 96
-        height: 64
+        x: 329
+        y: 28
+        width: 10
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,10 +521,10 @@ TextureImporter:
       name: weapons-Sheet_19
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 96
-        height: 64
+        x: 430
+        y: 28
+        width: 4
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
