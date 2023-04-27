@@ -64,11 +64,22 @@ public class ShopSystem : MonoBehaviour
         foreach (ItemScriptableObject itemScriptableObject in selectedPool)
         {
             TextMeshProUGUI name = shopItems[i].transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI subName = shopItems[i].transform.Find("SubName").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI moneyAmount = shopItems[i].transform.Find("buyButton").Find("MoneyAmount").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI stats = shopItems[i].transform.Find("Stats").GetComponent<TextMeshProUGUI>();
             Image imageSprite = shopItems[i].transform.Find("ItemSprite").GetComponent<Image>();
             Image image = shopItems[i].GetComponent<Image>();
             imageSprite.sprite = itemScriptableObject.itemSprite[0];
             name.text = itemScriptableObject.itemName;
             imageSprite.rectTransform.localScale = new Vector2(itemScriptableObject.scaleX, itemScriptableObject.scaleY);
+            subName.text = itemScriptableObject.itemType;
+            moneyAmount.text = itemScriptableObject.cost.ToString();
+            stats.text = "";
+            foreach(ItemInfo itemInfo in itemScriptableObject.itemInfos)
+            {
+                stats.text += "+" + "<color="+ "#4A58FF" + ">" + itemInfo.damageValue + "</color>" + " " + itemInfo.damageInfo + "<br>";
+            }
+
             i++;
         }
         yield return 0;
