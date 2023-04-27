@@ -15,4 +15,5 @@ public class ItemScriptableObject : ScriptableObject
     public int rarity;
     public float scaleX;
     public float scaleY;
+    public float cost;
 }
