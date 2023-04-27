@@ -31,3 +31,4 @@ MonoBehaviour:
   rarity: 0
   scaleX: 0.8
   scaleY: 0.8
+  cost: 20
