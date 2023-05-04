@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe0127adc7e1f843a984d8a0ed1f1f2, type: 3}
+  m_Name: Ears
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemType: 
+  itemInfos:
+  - damageInfo: Range
+    damageValue: 10
+  itemShopSprite:
+  - {fileID: -679853702, guid: ecd4e52653879304bafb355fda225aef, type: 3}
+  itemGameSprite:
+  - {fileID: 1244621519, guid: e5950199886adcd4884a8484ae1e01b1, type: 3}
+  itemColours: []
+  weight: 10
+  rarity: 1
+  scaleX: 0
+  scaleY: 0
+  cost: 45
