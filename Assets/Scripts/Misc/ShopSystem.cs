@@ -69,7 +69,7 @@ public class ShopSystem : MonoBehaviour
             TextMeshProUGUI stats = shopItems[i].transform.Find("Stats").GetComponent<TextMeshProUGUI>();
             Image imageSprite = shopItems[i].transform.Find("ItemSprite").GetComponent<Image>();
             Image image = shopItems[i].GetComponent<Image>();
-            imageSprite.sprite = itemScriptableObject.itemSprite[0];
+            imageSprite.sprite = itemScriptableObject.itemGameSprite[0];
             name.text = itemScriptableObject.itemName;
             imageSprite.rectTransform.localScale = new Vector2(itemScriptableObject.scaleX, itemScriptableObject.scaleY);
             subName.text = itemScriptableObject.itemType;
