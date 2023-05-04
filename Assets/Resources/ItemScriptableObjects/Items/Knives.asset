@@ -14,17 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Sakuya's knives
   itemType: Throwable weapon
-  itemValues:
-  - 4
   itemInfos:
   - damageInfo: Damage
     damageValue: 10
   - damageInfo: Range
     damageValue: 20
-  itemSprite:
+  itemShopSprite:
   - {fileID: 222052038, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  itemGameSprite:
   - {fileID: 554089721, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
-  - {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  - {fileID: 222052038, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemColours: []
   weight: 20
   rarity: 0

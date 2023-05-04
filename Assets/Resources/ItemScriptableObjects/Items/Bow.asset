@@ -14,18 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Eirin's bow
   itemType: Bow
-  itemValues:
-  - 4
   itemInfos:
   - damageInfo: Damage
     damageValue: 10
   - damageInfo: Range
     damageValue: 20
-  itemSprite:
+  itemShopSprite:
   - {fileID: 865992539, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
-  - {fileID: 505778923, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
-  - {fileID: -401330309, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  itemGameSprite:
   - {fileID: 1459716307, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  - {fileID: -401330309, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  - {fileID: 1234313185, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemColours: []
   weight: 20
   rarity: 0

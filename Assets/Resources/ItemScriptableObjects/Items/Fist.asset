@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Mokou's Fist
   itemType: Hands
-  itemValues: []
   itemInfos:
   - damageInfo: Damage
     damageValue: 5
   - damageInfo: Range
     damageValue: 1
-  itemSprite:
+  itemShopSprite:
+  - {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  itemGameSprite:
   - {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemColours: []
   weight: 20
