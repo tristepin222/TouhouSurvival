@@ -140,33 +140,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items1-Sheet_1
+      name: items1-Sheet_2
       rect:
         serializedVersion: 2
         x: 35
         y: 8
-        width: 12
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f40a3b0b1f03aa4f9edb4bb1283005f
-      internalID: 294852985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: items1-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 8
-        width: 12
+        width: 26
         height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
