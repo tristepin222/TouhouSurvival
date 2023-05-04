@@ -14,17 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Youmu's ghostblade
   itemType: Blade
-  itemValues:
-  - 4
   itemInfos:
   - damageInfo: Damage
     damageValue: 10
   - damageInfo: Range
     damageValue: 20
-  itemSprite:
+  itemShopSprite:
   - {fileID: -1262266357, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  itemGameSprite:
   - {fileID: -94905873, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
-  - {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemColours: []
   weight: 20
   rarity: 0
