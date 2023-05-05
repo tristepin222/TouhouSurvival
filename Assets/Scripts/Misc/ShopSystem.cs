@@ -4,25 +4,20 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class ShopSystem : MonoBehaviour
+public class ShopSystem
 {
-    [SerializeField] GameObject[] shopItems;
     private ItemScriptableObject[] itemScriptableObjects;
     private ItemScriptableObject[] selectedPool =  new ItemScriptableObject[4];
     // Start is called before the first frame update
-    void Start()
+    public void GetItems()
     {
         itemScriptableObjects = Resources.LoadAll<ItemScriptableObject>("ItemScriptableObjects/Items/");
-        StartCoroutine(CheckWeight());
-
     }
-    private IEnumerator CheckWeight(float penality = 0)
+    public ItemScriptableObject[] CheckWeight(float penality = 0)
     {
         int i = 0;
-
-        i = 0;
         float weightTotal = CalculateWeightTotal();
-        float random = UnityEngine.Random.Range(0, weightTotal - penality);
+        float random = Random.Range(0, weightTotal - penality);
         foreach (ItemScriptableObject itemScriptableObject in itemScriptableObjects)
         {
 
@@ -43,51 +38,18 @@ public class ShopSystem : MonoBehaviour
                 random -= itemScriptableObject.weight;
             }
         }
-        StartCoroutine(CheckEmpty());
-        yield return 0;
+        CheckEmpty();
+        return selectedPool;
     }
-    private IEnumerator CheckEmpty()
+    private void CheckEmpty()
     {
         for (int i = 0; i < selectedPool.Length; i++)
         {
             if (selectedPool[i] == null)
             {
-                StartCoroutine(CheckWeight());
-                yield break;
+                CheckWeight();
             }
         }
-        StartCoroutine(ShowUpgrades());
-    }
-    private IEnumerator ShowUpgrades()
-    {
-        int i = 0;
-        foreach (ItemScriptableObject itemScriptableObject in selectedPool)
-        {
-            TextMeshProUGUI name = shopItems[i].transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
-            TextMeshProUGUI subName = shopItems[i].transform.Find("SubName").GetComponent<TextMeshProUGUI>();
-            TextMeshProUGUI moneyAmount = shopItems[i].transform.Find("buyButton").Find("MoneyAmount").GetComponent<TextMeshProUGUI>();
-            TextMeshProUGUI stats = shopItems[i].transform.Find("Stats").GetComponent<TextMeshProUGUI>();
-            Image imageSprite = shopItems[i].transform.Find("ItemSprite").GetComponent<Image>();
-            Image image = shopItems[i].GetComponent<Image>();
-            imageSprite.sprite = itemScriptableObject.itemGameSprite[0];
-            name.text = itemScriptableObject.itemName;
-            imageSprite.rectTransform.localScale = new Vector2(itemScriptableObject.scaleX, itemScriptableObject.scaleY);
-            subName.text = itemScriptableObject.itemType;
-            moneyAmount.text = itemScriptableObject.cost.ToString();
-            stats.text = "";
-            foreach(ItemInfo itemInfo in itemScriptableObject.itemInfos)
-            {
-                stats.text += "+" + "<color="+ "#4A58FF" + ">" + itemInfo.damageValue + "</color>" + " " + itemInfo.damageInfo + "<br>";
-            }
-
-            i++;
-        }
-        yield return 0;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     private float CalculateWeightTotal()
     {
