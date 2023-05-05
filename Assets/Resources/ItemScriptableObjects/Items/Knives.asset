@@ -27,6 +27,6 @@ MonoBehaviour:
   itemColours: []
   weight: 20
   rarity: 0
-  scaleX: 0.8
-  scaleY: 0.8
+  scaleX: 1
+  scaleY: 1
   cost: 20
