@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe0127adc7e1f843a984d8a0ed1f1f2, type: 3}
   m_Name: Ears
   m_EditorClassIdentifier: 
-  itemName: 
-  itemType: 
+  itemName: Reisen's ears
+  itemType: passive item
   itemInfos:
   - damageInfo: Range
     damageValue: 10
