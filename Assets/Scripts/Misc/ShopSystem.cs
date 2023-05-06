@@ -9,12 +9,16 @@ public class ShopSystem
     private ItemScriptableObject[] itemScriptableObjects;
     private ItemScriptableObject[] selectedPool =  new ItemScriptableObject[4];
     // Start is called before the first frame update
-    public void GetItems()
+    private void GetItems()
     {
         itemScriptableObjects = Resources.LoadAll<ItemScriptableObject>("ItemScriptableObjects/Items/");
     }
     public ItemScriptableObject[] CheckWeight(float penality = 0)
     {
+        if(itemScriptableObjects == null)
+        {
+            GetItems();
+        }
         int i = 0;
         float weightTotal = CalculateWeightTotal();
         float random = Random.Range(0, weightTotal - penality);

@@ -11,7 +11,6 @@ public class UIShopSystem : MonoBehaviour
     private void Start()
     {
         ShopSystem shopSystem = new ShopSystem();
-        shopSystem.GetItems();
         pool = shopSystem.CheckWeight();
         StartCoroutine(ShowUpgrades(pool));
     }
