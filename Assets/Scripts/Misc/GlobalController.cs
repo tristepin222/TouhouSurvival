@@ -18,9 +18,6 @@ public class GlobalController : MonoBehaviour
     {
         bonusDamage += 1;
         bonusAttackSpeed += 1;
-    }
-    void Start()
-    {
         if (Instance == null)
         {
             Instance = this;
