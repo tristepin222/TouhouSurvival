@@ -4,35 +4,33 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-public class UpgradeSystem : MonoBehaviour
+public class UpgradeSystem
 {
     [SerializeField] GameObject[] images;
     [SerializeField] UpgradeScriptableObject[] upgradeScriptableObjects;
     [SerializeField] RarityColour[] rarityColours;
 
-    private UpgradeScriptableObject[] selectedPool = new UpgradeScriptableObject[5];
+    private UpgradeScriptableObject[] selectedPool;
     // Start is called before the first frame update
-    void Start()
+    public bool CanShowUpgrades()
     {
-        if (GlobalController.Instance.levelToUpgrade > 0)
-        {
-            GlobalController.Instance.levelToUpgrade--;
-            StartCoroutine(CheckWeight());
-        }
-        else
-        {
-            StartCoroutine(HideUpgrades());
-        }
+        return (GlobalController.Instance.levelToUpgrade > 0);
     }
-    private IEnumerator CheckWeight(float penality = 0)
+
+    public UpgradeScriptableObject[] GetUpgrades()
+    {
+        if (upgradeScriptableObjects == null)
+        {
+            upgradeScriptableObjects = Resources.LoadAll<UpgradeScriptableObject>("ItemScriptableObjects/Upgrades/");
+        }
+        selectedPool = new UpgradeScriptableObject[5];
+        GlobalController.Instance.levelToUpgrade--;
+        return CheckWeight();
+    }
+
+    private UpgradeScriptableObject[] CheckWeight(float penality = 0)
     {
         int i = 0;
-        foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
-        {
-            images[i].gameObject.SetActive(true);
-            i++;
-        }
-        i = 0;
         float weightTotal = CalculateWeightTotal();
         float random = UnityEngine.Random.Range(0, weightTotal - penality);
         foreach (UpgradeScriptableObject upgradeScriptableObject in upgradeScriptableObjects)
@@ -56,20 +54,19 @@ public class UpgradeSystem : MonoBehaviour
             }
         }
 
-        StartCoroutine(CheckEmpty());
-        yield return 0;
+        CheckEmpty();
+        return selectedPool;
     }
-    private IEnumerator CheckEmpty()
+
+    private void CheckEmpty()
     {
         for (int i = 0; i < selectedPool.Length; i++)
         {
             if (selectedPool[i] == null)
             {
-                StartCoroutine(CheckWeight());
-                yield break;
+                CheckWeight();
             }
         }
-        StartCoroutine(ShowUpgrades());
     }
 
     private float CalculateWeightTotal()
@@ -81,52 +78,8 @@ public class UpgradeSystem : MonoBehaviour
         }
         return weightTotal;
     }
-    private IEnumerator ShowUpgrades()
-    {
-        int i = 0;
-        foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
-        {
-            TextMeshProUGUI name = images[i].transform.Find("Name").GetComponent<TextMeshProUGUI>();
-            Image imageSprite = images[i].transform.Find("Image").GetComponent<Image>();
-            Image image = images[i].GetComponent<Image>();
-            images[i].transform.Find("Image").GetComponent<Image>().color = upgradeScriptableObject.upgradeColor;
-            images[i].transform.Find("Description").GetComponent<TextMeshProUGUI>().text = upgradeScriptableObject.upgradeDescription;
-            imageSprite.sprite = upgradeScriptableObject.upgradeSprite;
-            name.text = upgradeScriptableObject.upgradeName;
-            switch (upgradeScriptableObject.rarity)
-            {
-                case 0:
-                    image.color = rarityColours[0].imageColor;
-                    name.color = rarityColours[0].textColor;
-                    break;
-                case 1:
-                    image.color = rarityColours[1].imageColor;
-                    name.color = rarityColours[1].textColor;
-                    break;
-                case 2:
-                    image.color = rarityColours[2].imageColor;
-                    name.color = rarityColours[2].textColor;
-                    break;
-                case 3:
-                    image.color = rarityColours[3].imageColor;
-                    name.color = rarityColours[3].textColor;
-                    break;
-            }
-            i++;
-        }
-        yield return 0;
-    }
-    private IEnumerator HideUpgrades()
-    {
-        int i = 0;
-        foreach (UpgradeScriptableObject upgradeScriptableObject in selectedPool)
-        {
-            images[i].gameObject.SetActive(false);
-            i++;
-        }
-        yield return 0;
-    }
-    public void Buy(int upgradeIndex)
+
+    public void AddStats(int upgradeIndex)
     {
         switch (selectedPool[upgradeIndex].upgradeName)
         {
@@ -144,12 +97,6 @@ public class UpgradeSystem : MonoBehaviour
             case "Range":
                 GlobalController.Instance.bonusRange += selectedPool[upgradeIndex].upgradeValue;
                 break;
-        }
-        StartCoroutine(HideUpgrades());
-        if (GlobalController.Instance.levelToUpgrade > 0)
-        {
-            GlobalController.Instance.levelToUpgrade--;
-            StartCoroutine(CheckWeight());
         }
     }
 }
