@@ -1,38 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 public class LevelSystem : MonoBehaviour
 {
-    [SerializeField] Slider XPSlider;
-    [SerializeField] float MaxXPAmount;
+    [SerializeField] float maxXPAmount;
+    [SerializeField] UIXPSystem uIXPSystem;
     private float xp;
+    private int level;
 
     private const float RATIO = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
         xp = GlobalController.Instance.xp;
-        XPSlider.value = xp;
-        CalculateNewMaxAmount();
+        level = GlobalController.Instance.level;
+        maxXPAmount = uIXPSystem.CalculateNewMaxAmount(RATIO, level);
+        uIXPSystem.SetAmount(xp);
     }
     public void addXP(float amount)
     {
         GlobalController.Instance.xp += amount;
-        if (xp >= MaxXPAmount)
+        if (xp >= maxXPAmount)
         {
             xp = 0;
-            GlobalController.Instance.level++;
+            level = GlobalController.Instance.level++;
+            GlobalController.Instance.xp = 0;
             GlobalController.Instance.levelToUpgrade++;
-            CalculateNewMaxAmount();
+            maxXPAmount = uIXPSystem.CalculateNewMaxAmount(RATIO, level);
         }
         xp += amount;
-        XPSlider.value = xp;
-    }
-    private void CalculateNewMaxAmount()
-    {
-        XPSlider.maxValue = (GlobalController.Instance.level+1 * GlobalController.Instance.level + 1) / (RATIO * RATIO);
-        MaxXPAmount = XPSlider.maxValue;
+        uIXPSystem.SetAmount(xp);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
