@@ -18,7 +18,7 @@ public class LevelSystem : MonoBehaviour
         maxXPAmount = uIXPSystem.CalculateNewMaxAmount(RATIO, level);
         uIXPSystem.SetAmount(xp);
     }
-    public void addXP(float amount)
+    public void AddXP(float amount)
     {
         GlobalController.Instance.xp += amount;
         if (xp >= maxXPAmount)
@@ -38,7 +38,7 @@ public class LevelSystem : MonoBehaviour
         {
             if (loot.item.itemType == Item.ItemType.XPOrb)
             {
-                addXP(1f);
+                AddXP(1f);
                 Destroy(collision.gameObject);
             }
         }
