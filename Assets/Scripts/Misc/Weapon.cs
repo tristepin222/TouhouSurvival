@@ -5,7 +5,6 @@ using UnityEngine.VFX;
 using System;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using System;
 
 public class Weapon : MonoBehaviour
 {
