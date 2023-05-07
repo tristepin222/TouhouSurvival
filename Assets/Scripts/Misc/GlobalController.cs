@@ -12,6 +12,7 @@ public class GlobalController : MonoBehaviour
     public int level;
     public int levelToUpgrade;
     public float xp;
+    public float coin;
     public bool isDead;
     // Start is called before the first frame update
     private void Awake()
