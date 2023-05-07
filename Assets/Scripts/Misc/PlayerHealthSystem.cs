@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System;
-using UnityEngine.UI;
 
 public class PlayerHealthSystem : HealthSystem
 {
@@ -13,7 +12,7 @@ public class PlayerHealthSystem : HealthSystem
 
     [SerializeField] public new Rigidbody2D rigidbody2D;
     [SerializeField] bool isDead;
-    [SerializeField] Slider healthSlider; 
+    [SerializeField] UIHealthSystem healthSlider; 
 
     [SerializeField]
     private OnDeathEvent m_OnDeath = new OnDeathEvent();
@@ -23,7 +22,7 @@ public class PlayerHealthSystem : HealthSystem
         GlobalController.Instance.isDead = false;
         baseHealth += GlobalController.Instance.bonusHealthAmount;
         base.Start();
-        setSlider();
+        healthSlider.SetSlider(baseHealth, Health);
     }
 
     protected override void Die()
@@ -45,15 +44,9 @@ public class PlayerHealthSystem : HealthSystem
         if (collision.transform.tag == "Enemy")
         {
             Damage(1f);
-            setSlider();
+            healthSlider.SetSlider(baseHealth, Health);
             Destroy(collision.gameObject);
         }
-    }
-
-    private void setSlider()
-    {
-        healthSlider.maxValue = baseHealth;
-        healthSlider.value = Health;
     }
 
     public OnDeathEvent onEffectStart
