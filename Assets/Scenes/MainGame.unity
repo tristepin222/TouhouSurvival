@@ -441,6 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112723147}
   - component: {fileID: 112723148}
+  - component: {fileID: 112723149}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -522,6 +523,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &112723149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112723146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d18c32aeff7f6644b23103c15d51587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 112723148}
 --- !u!1 &200031467
 GameObject:
   m_ObjectHideFlags: 3
@@ -1977,6 +1991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403702039}
   - component: {fileID: 1403702040}
+  - component: {fileID: 1403702041}
   m_Layer: 5
   m_Name: Slider (1)
   m_TagString: Untagged
@@ -2058,6 +2073,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1403702041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403702038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950a965fc0da7524ba9b6385101971f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XPSlider: {fileID: 1403702040}
 --- !u!1 &1453927597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,7 +2204,7 @@ PrefabInstance:
     - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: healthSlider
       value: 
-      objectReference: {fileID: 112723148}
+      objectReference: {fileID: 112723149}
     - target: {fileID: 543908612841861316, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: animator
       value: 
@@ -2189,6 +2217,10 @@ PrefabInstance:
       propertyPath: XPSlider
       value: 
       objectReference: {fileID: 1403702040}
+    - target: {fileID: 672112121276573449, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: uIXPSystem
+      value: 
+      objectReference: {fileID: 1403702041}
     - target: {fileID: 1213365138092278048, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
