@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class CoinSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void AddCoin(float amount)
     {
-        
+        GlobalController.Instance.coin += amount;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.TryGetComponent(out Loot loot))
+        {
+            if (loot.item.itemType == Item.ItemType.Coin)
+            {
+                AddCoin(1f);
+                Destroy(collision.gameObject);
+            }
+        }
     }
 }
