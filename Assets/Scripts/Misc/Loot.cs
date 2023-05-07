@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
+    [SerializeField] public Item item;
     [SerializeField] float speed = 1;
     private bool canMoveTowards;
     // Start is called before the first frame update

@@ -6,6 +6,7 @@ using System;
 [Serializable]
 public class Item
 {
+    public ItemType itemType;
     public enum ItemType
     {
         Coin,

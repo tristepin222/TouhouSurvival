@@ -36,8 +36,11 @@ public class LevelSystem : MonoBehaviour
     {
         if (collision.TryGetComponent(out Loot loot))
         {
-            addXP(1f);
-            Destroy(collision.gameObject);
+            if (loot.item.itemType == Item.ItemType.XPOrb)
+            {
+                addXP(1f);
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
