@@ -32,6 +32,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.6117647
       objectReference: {fileID: 0}
+    - target: {fileID: 475463422078871604, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+      propertyPath: loots.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 475463422078871604, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+      propertyPath: loots.Array.data[0]
+      value: 
+      objectReference: {fileID: 4872098914270085862, guid: 4bf962fe4c8a373458d8f59d4e2fe401, type: 3}
+    - target: {fileID: 475463422078871604, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+      propertyPath: loots.Array.data[1]
+      value: 
+      objectReference: {fileID: 4872098914270085862, guid: 484f30dad01a0134b9cd163eb3bafe8c, type: 3}
     - target: {fileID: 3544188537930787384, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
       propertyPath: m_Color.b
       value: 0.19496846

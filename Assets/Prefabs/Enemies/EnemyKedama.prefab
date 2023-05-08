@@ -772,7 +772,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6c51a37b2a64343b8c50f930360cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: {fileID: 4872098914270085862, guid: 4bf962fe4c8a373458d8f59d4e2fe401, type: 3}
+  loots:
+  - {fileID: 4872098914270085862, guid: 4bf962fe4c8a373458d8f59d4e2fe401, type: 3}
+  - {fileID: 4872098914270085862, guid: 484f30dad01a0134b9cd163eb3bafe8c, type: 3}
 --- !u!1 &7837608521586257387
 GameObject:
   m_ObjectHideFlags: 0

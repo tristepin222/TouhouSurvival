@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class LootSystem : MonoBehaviour
 {
-    [SerializeField] GameObject loot;
+    [SerializeField] GameObject[] loots;
+    GameObject currentLoot;
     // Start is called before the first frame update
 
     private void OnDestroy()
     {
         if (!this.gameObject.scene.isLoaded) return;
-        GameObject currentLoot = Instantiate(loot);
-        currentLoot.transform.position = transform.position;
+        foreach (GameObject loot in loots)
+        {
+            currentLoot = Instantiate(loot);
+            currentLoot.transform.position = transform.position;
+        }
     }
 }
