@@ -64,4 +64,9 @@ public class ShopSystem
         }
         return weightTotal;
     }
+
+    public void AddItem(int ItemIndex)
+    {
+
+    }
 }

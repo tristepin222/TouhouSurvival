@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class UIShopSystem : MonoBehaviour
 {
     [SerializeField] UIShopElement[] uIShopItems;
     [SerializeField] RarityScriptableObject rarityScriptableObject;
+    [SerializeField] TextMeshProUGUI currentCoinAmountText;
+    [SerializeField] TextMeshProUGUI rerollCoinAmountText;
     private ItemScriptableObject[] pool;
+    ShopSystem shopSystem;
     // Start is called before the first frame update
     private void Start()
     {
-        ShopSystem shopSystem = new ShopSystem();
+        shopSystem = new ShopSystem();
         pool = shopSystem.CheckWeight();
         StartCoroutine(ShowUpgrades(pool));
+        UpdateCoinAmount();
+        rerollCoinAmountText.text = (GlobalController.Instance.coin * 5).ToString();
     }
     private IEnumerator ShowUpgrades(ItemScriptableObject[] selectedPool)
     {
@@ -55,5 +62,15 @@ public class UIShopSystem : MonoBehaviour
             i++;
         }
         yield return 0;
+    }
+    private void UpdateCoinAmount()
+    {
+        currentCoinAmountText.text = GlobalController.Instance.coin.ToString();
+    }
+    public void Buy(int ItemIndex)
+    {
+        shopSystem.AddItem(ItemIndex);
+        GlobalController.Instance.coin -= float.Parse(uIShopItems[ItemIndex].moneyAmount.text);
+        UpdateCoinAmount();
     }
 }
