@@ -11,5 +11,7 @@ public class Item
     {
         Coin,
         XPOrb,
+        Weapon,
+        PassiveItem
     }
 }
