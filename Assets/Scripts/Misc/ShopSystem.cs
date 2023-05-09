@@ -65,8 +65,31 @@ public class ShopSystem
         return weightTotal;
     }
 
-    public void AddItem(int ItemIndex)
+    public void AddItem(int itemIndex)
     {
-
+        switch (selectedPool[itemIndex].itemCategory)
+        {
+            case Item.ItemType.PassiveItem:
+                foreach(ItemInfo itemInfo in selectedPool[itemIndex].itemInfos)
+                {
+                    switch (itemInfo.name)
+                    {
+                        case "Speed":
+                            GlobalController.Instance.bonusSpeed += itemInfo.value;
+                            break;
+                        case "Attack Speed":
+                            GlobalController.Instance.bonusAttackSpeed += itemInfo.value;
+                            break;
+                        case "Range":
+                            GlobalController.Instance.bonusRange += itemInfo.value;
+                            break;
+                        case "Damage":
+                            GlobalController.Instance.bonusDamage += itemInfo.value;
+                            break;
+                    }
+                }
+                selectedPool[itemIndex] = null;
+                break;
+        }
     }
 }
