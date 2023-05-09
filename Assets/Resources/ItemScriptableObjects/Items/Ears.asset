@@ -15,13 +15,14 @@ MonoBehaviour:
   itemName: Reisen's ears
   itemType: passive item
   itemInfos:
-  - damageInfo: Range
-    damageValue: 10
+  - name: Damage
+    value: 20
   itemShopSprite:
   - {fileID: -679853702, guid: ecd4e52653879304bafb355fda225aef, type: 3}
   itemGameSprite:
   - {fileID: 1244621519, guid: e5950199886adcd4884a8484ae1e01b1, type: 3}
   itemColours: []
+  itemCategory: 3
   weight: 10
   rarity: 1
   scaleX: 1

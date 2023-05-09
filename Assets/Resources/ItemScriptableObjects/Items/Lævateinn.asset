@@ -15,15 +15,16 @@ MonoBehaviour:
   itemName: "Flandre's L\xE6vateinn"
   itemType: Blade
   itemInfos:
-  - damageInfo: Damage
-    damageValue: 10
-  - damageInfo: Range
-    damageValue: 20
+  - name: Damage
+    value: 20
+  - name: Range
+    value: 20
   itemShopSprite:
   - {fileID: 1770463298, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemGameSprite:
   - {fileID: -947855893, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemColours: []
+  itemCategory: 2
   weight: 20
   rarity: 0
   scaleX: 1

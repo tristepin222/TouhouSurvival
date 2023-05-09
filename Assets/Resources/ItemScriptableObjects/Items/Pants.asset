@@ -15,15 +15,16 @@ MonoBehaviour:
   itemName: Mokou's pants
   itemType: passive item
   itemInfos:
-  - damageInfo: Health
-    damageValue: 20
-  - damageInfo: Armor
-    damageValue: 10
+  - name: Damage
+    value: 20
+  - name: Range
+    value: 20
   itemShopSprite:
   - {fileID: 1847736307, guid: ecd4e52653879304bafb355fda225aef, type: 3}
   itemGameSprite:
   - {fileID: -1781038338, guid: e5950199886adcd4884a8484ae1e01b1, type: 3}
   itemColours: []
+  itemCategory: 3
   weight: 10
   rarity: 1
   scaleX: 1

@@ -15,15 +15,16 @@ MonoBehaviour:
   itemName: Youmu's phantom
   itemType: passive item
   itemInfos:
-  - damageInfo: Speed
-    damageValue: 20
-  - damageInfo: Attack Speed
-    damageValue: 10
+  - name: Speed
+    value: 20
+  - name: Attack Speed
+    value: 20
   itemShopSprite:
   - {fileID: -1535808852, guid: ecd4e52653879304bafb355fda225aef, type: 3}
   itemGameSprite:
   - {fileID: -1333421433, guid: e5950199886adcd4884a8484ae1e01b1, type: 3}
   itemColours: []
+  itemCategory: 3
   weight: 10
   rarity: 1
   scaleX: 1

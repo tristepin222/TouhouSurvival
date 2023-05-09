@@ -15,16 +15,17 @@ MonoBehaviour:
   itemName: Reisen's pistol
   itemType: Hands
   itemInfos:
-  - damageInfo: Damage
-    damageValue: 5
-  - damageInfo: Range
-    damageValue: 1
+  - name: Damage
+    value: 20
+  - name: Range
+    value: 20
   itemShopSprite:
   - {fileID: -256896591, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemGameSprite:
   - {fileID: -256896591, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   - {fileID: 1999471059, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
   itemColours: []
+  itemCategory: 2
   weight: 20
   rarity: 0
   scaleX: 1

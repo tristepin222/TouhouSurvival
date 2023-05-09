@@ -5,6 +5,6 @@ using System;
 [Serializable]
 public class ItemInfo
 {
-    public string damageInfo;
-    public float damageValue;
+    public string name;
+    public float value;
 }
