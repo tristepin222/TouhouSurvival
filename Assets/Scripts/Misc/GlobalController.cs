@@ -8,6 +8,7 @@ public class GlobalController : MonoBehaviour
     public float bonusHealthAmount;
     public float bonusDamage;
     public float bonusAttackSpeed;
+    public float bonusSpeed;
     public float bonusRange;
     public int level;
     public int levelToUpgrade;
