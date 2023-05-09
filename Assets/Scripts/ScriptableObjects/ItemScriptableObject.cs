@@ -11,6 +11,7 @@ public class ItemScriptableObject : ScriptableObject
     public List<Sprite> itemShopSprite = new List<Sprite>();
     public List<Sprite> itemGameSprite = new List<Sprite>();
     public List<Color> itemColours = new List<Color>();
+    public Item.ItemType itemCategory;
     public int weight;
     public int rarity;
     public float scaleX;
