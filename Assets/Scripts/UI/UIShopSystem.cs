@@ -34,7 +34,7 @@ public class UIShopSystem : MonoBehaviour
             uIShopItems[i].stats.text = "";
             foreach (ItemInfo itemInfo in itemScriptableObject.itemInfos)
             {
-                uIShopItems[i].stats.text += "+" + "<color=" + "#4A58FF" + ">" + itemInfo.damageValue + "</color>" + " " + itemInfo.damageInfo + "<br>";
+                uIShopItems[i].stats.text += "+" + "<color=" + "#4A58FF" + ">" + itemInfo.value + "</color>" + " " + itemInfo.name + "<br>";
             }
             switch (itemScriptableObject.rarity)
             {
@@ -69,8 +69,12 @@ public class UIShopSystem : MonoBehaviour
     }
     public void Buy(int ItemIndex)
     {
-        shopSystem.AddItem(ItemIndex);
-        GlobalController.Instance.coin -= float.Parse(uIShopItems[ItemIndex].moneyAmount.text);
-        UpdateCoinAmount();
+        float price = float.Parse(uIShopItems[ItemIndex].moneyAmount.text);
+        if ((GlobalController.Instance.coin - price) > 0)
+        {
+            shopSystem.AddItem(ItemIndex);
+            GlobalController.Instance.coin -= float.Parse(uIShopItems[ItemIndex].moneyAmount.text);
+            UpdateCoinAmount();
+        }
     }
 }
