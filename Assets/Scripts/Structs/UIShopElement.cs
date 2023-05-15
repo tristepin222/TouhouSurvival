@@ -12,6 +12,7 @@ public class UIShopElement
     public TextMeshProUGUI subName;
     public TextMeshProUGUI moneyAmount;
     public TextMeshProUGUI stats;
+    public Image parent;
     public Image imageSprite;
     public Image backGround;
 }
