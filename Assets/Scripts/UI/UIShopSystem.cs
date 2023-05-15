@@ -16,9 +16,7 @@ public class UIShopSystem : MonoBehaviour
     private void Start()
     {
         shopSystem = new ShopSystem();
-        pool = shopSystem.CheckWeight();
-        StartCoroutine(ShowUpgrades(pool));
-        UpdateCoinAmount();
+        Reroll();
         rerollCoinAmountText.text = (GlobalController.Instance.coin * 5).ToString();
     }
     private IEnumerator ShowUpgrades(ItemScriptableObject[] selectedPool)
@@ -26,6 +24,7 @@ public class UIShopSystem : MonoBehaviour
         int i = 0;
         foreach (ItemScriptableObject itemScriptableObject in selectedPool)
         {
+            uIShopItems[i].parent.gameObject.SetActive(true);
             uIShopItems[i].imageSprite.sprite = itemScriptableObject.itemShopSprite[0];
             uIShopItems[i].name.text = itemScriptableObject.itemName;
             uIShopItems[i].imageSprite.rectTransform.localScale = new Vector2(itemScriptableObject.scaleX, itemScriptableObject.scaleY);
@@ -63,18 +62,31 @@ public class UIShopSystem : MonoBehaviour
         }
         yield return 0;
     }
+
+    private void HideUpgrade(int indexItem)
+    {
+        uIShopItems[indexItem].parent.gameObject.SetActive(false);
+    }
+
     private void UpdateCoinAmount()
     {
         currentCoinAmountText.text = GlobalController.Instance.coin.ToString();
     }
-    public void Buy(int ItemIndex)
+    public void Buy(int indexItem)
     {
-        float price = float.Parse(uIShopItems[ItemIndex].moneyAmount.text);
+        float price = float.Parse(uIShopItems[indexItem].moneyAmount.text);
         if ((GlobalController.Instance.coin - price) > 0)
         {
-            shopSystem.AddItem(ItemIndex);
-            GlobalController.Instance.coin -= float.Parse(uIShopItems[ItemIndex].moneyAmount.text);
+            shopSystem.AddItem(indexItem);
+            GlobalController.Instance.coin -= float.Parse(uIShopItems[indexItem].moneyAmount.text);
             UpdateCoinAmount();
+            HideUpgrade(indexItem);
         }
+    }
+    public void Reroll()
+    {
+        pool = shopSystem.CheckWeight();
+        StartCoroutine(ShowUpgrades(pool));
+        UpdateCoinAmount();
     }
 }
