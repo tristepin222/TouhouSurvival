@@ -65,6 +65,15 @@ public class ShopSystem
         return weightTotal;
     }
 
+    public void MoveItem(int fromIndex, int toIndex)
+    {
+        selectedPool[toIndex] = selectedPool[fromIndex];
+    }
+    public void RemoveItem(int itemIndex)
+    {
+        selectedPool[itemIndex] = null;
+    }
+
     public void AddItem(int itemIndex)
     {
         switch (selectedPool[itemIndex].itemCategory)
@@ -88,7 +97,7 @@ public class ShopSystem
                             break;
                     }
                 }
-                selectedPool[itemIndex] = null;
+                RemoveItem(itemIndex);
                 break;
         }
     }
