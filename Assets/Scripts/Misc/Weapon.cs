@@ -9,9 +9,9 @@ using UnityEngine.EventSystems;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] int damage;
-    [SerializeField] bool trackMouse;
     [SerializeField] GameObject player;
     [SerializeField] Transform child;
+    [SerializeField] SpriteRenderer sprite;
     private bool canAttack = true;
 
     [Serializable]
@@ -71,7 +71,6 @@ public class Weapon : MonoBehaviour
     {
         yield return 0;
         m_OnReset.Invoke();
-        trackMouse = true;
     }
 
     public void Hit(HealthSystem healthSystem)
@@ -84,6 +83,16 @@ public class Weapon : MonoBehaviour
     public void Disable()
     {
         canAttack = false;
+    }
+
+    public void HardDisable()
+    {
+        this.gameObject.SetActive(false);
+    }
+
+    public void SetWeapon(ItemScriptableObject itemScriptableObject)
+    {
+        sprite.sprite = itemScriptableObject.itemGameSprite[0];
     }
 
     public OnAttackEvent onAttack
