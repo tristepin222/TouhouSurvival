@@ -19,6 +19,7 @@ public class FightSystem : MonoBehaviour
     void Start()
     {
         indexWeapon = 0;
+        SetWeapons();
     }
 
     // Update is called once per frame
@@ -85,6 +86,24 @@ public class FightSystem : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void SetWeapons()
+    {
+        int index = 0;
+        foreach (Weapon weapon in weapons)
+        {
+            if (GlobalController.Instance.weapons[index] != null)
+            {
+                weapon.gameObject.SetActive(true);
+                weapon.SetWeapon(GlobalController.Instance.weapons[index]);
+            }
+            else
+            {
+                weapon.HardDisable();
+            }
+            index++;
+        }
     }
     private void getAllEnemies()
     {
