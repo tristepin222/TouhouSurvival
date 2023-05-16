@@ -13,6 +13,7 @@ public class UIShopSystem : MonoBehaviour
     [SerializeField] TextMeshProUGUI rerollCoinAmountText;
     [SerializeField] GameObject parent;
     [SerializeField] Volume volume;
+    [SerializeField] FightSystem fightSystem;
     private bool[] locks;
     private ItemScriptableObject[] pool;
     private int rerollAmount = 1;
@@ -82,10 +83,13 @@ public class UIShopSystem : MonoBehaviour
         float price = float.Parse(uIShopItems[indexItem].moneyAmount.text);
         if ((GlobalController.Instance.coin - price) > 0)
         {
-            shopSystem.AddItem(indexItem);
-            GlobalController.Instance.coin -= float.Parse(uIShopItems[indexItem].moneyAmount.text);
-            UpdateCoinAmount();
-            HideUpgrade(indexItem);
+            if (shopSystem.TryAddItem(indexItem))
+            {
+                GlobalController.Instance.coin -= float.Parse(uIShopItems[indexItem].moneyAmount.text);
+                UpdateCoinAmount();
+                HideUpgrade(indexItem);
+                fightSystem.SetWeapons();
+            }
         }
     }
     public void Reroll(bool updateReroll = false)
