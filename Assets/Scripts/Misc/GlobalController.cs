@@ -15,11 +15,13 @@ public class GlobalController : MonoBehaviour
     public float xp;
     public float coin;
     public bool isDead;
+    public ItemScriptableObject[] weapons;
     // Start is called before the first frame update
     private void Awake()
     {
         bonusDamage += 1;
         bonusAttackSpeed += 1;
+        weapons = new ItemScriptableObject[6];
         if (Instance == null)
         {
             Instance = this;
