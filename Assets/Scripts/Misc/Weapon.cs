@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] Transform child;
     [SerializeField] SpriteRenderer sprite;
+    [SerializeField] Vector3 basePos;
     private bool canAttack = true;
 
     [Serializable]
@@ -27,12 +28,10 @@ public class Weapon : MonoBehaviour
     private float speed = 5.0f;
     private Transform enemy;
     private bool canMove;
-    private Vector3 basePos;
 
     private void Start()
     {
         Damage = damage;
-        basePos = child.position;
     }
     public int Damage{ get; set; }
 
@@ -46,16 +45,15 @@ public class Weapon : MonoBehaviour
             }
             if (canMove)
             {
-                child.rotation = new Quaternion(0, 0, Quaternion.LookRotation(Vector3.RotateTowards(child.position, enemy.position - new Vector3(0, 0.3f), speed * 100 * Time.deltaTime * attackSpeed, 0f)).z, 0);
-                child.position = Vector3.MoveTowards(child.position, enemy.position - new Vector3(0, 0.3f), speed * Time.deltaTime);
-
+                transform.LookAt(enemy.transform, Vector3.up);
+                transform.rotation = new Quaternion(0, 0, transform.rotation.x, 0);
+                transform.position = Vector3.MoveTowards(transform.position, enemy.position, speed * Time.deltaTime);
             }
             else
             {
-                if (child.position != basePos)
+                if (transform.position != basePos)
                 {
-                    child.rotation = new Quaternion(0, 0, Quaternion.LookRotation(Vector3.RotateTowards(child.position, Vector3.zero, speed * 100 * Time.deltaTime, 0f)).z, 0);
-                    child.localPosition = Vector3.MoveTowards(child.localPosition, Vector3.zero, speed * Time.deltaTime);
+                    transform.localPosition = Vector3.MoveTowards(transform.localPosition, basePos, speed * Time.deltaTime);
                 }
             }
         }

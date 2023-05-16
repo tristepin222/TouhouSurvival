@@ -405,7 +405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005885910233657754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12998462, y: 0.119155064, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -429,6 +429,7 @@ MonoBehaviour:
   player: {fileID: 6040287386948589632}
   child: {fileID: 3739358204672394011}
   sprite: {fileID: 2773361367603528148}
+  basePos: {x: -0.13, y: 0.1, z: 0}
   attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
@@ -1353,7 +1354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3447363636490455028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000153929, y: 0.22915506, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1377,6 +1378,7 @@ MonoBehaviour:
   player: {fileID: 6040287386948589632}
   child: {fileID: 5805499956696841672}
   sprite: {fileID: 4747082534872625940}
+  basePos: {x: 0, y: 0.25, z: 0}
   attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
@@ -1767,7 +1769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4894944122298895491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000153929, y: 0.119155064, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1791,6 +1793,7 @@ MonoBehaviour:
   player: {fileID: 6040287386948589632}
   child: {fileID: 1465487507972241997}
   sprite: {fileID: 3137615002934087288}
+  basePos: {x: 0, y: 0.1, z: 0}
   attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
@@ -2469,7 +2472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6057121061790617076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13001539, y: 0.22915506, z: 0}
+  m_LocalPosition: {x: 0.13, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2493,6 +2496,7 @@ MonoBehaviour:
   player: {fileID: 6040287386948589632}
   child: {fileID: 8261918871683048789}
   sprite: {fileID: 4862333911564531765}
+  basePos: {x: 0.13, y: 0.25, z: 0}
   attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
@@ -2657,7 +2661,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7017266944362165950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13001539, y: 0.119155064, z: 0}
+  m_LocalPosition: {x: 0.13, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2681,6 +2685,7 @@ MonoBehaviour:
   player: {fileID: 6040287386948589632}
   child: {fileID: 1213365138092278048}
   sprite: {fileID: 2326087927663674403}
+  basePos: {x: 0.13, y: 0.1, z: 0}
   attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
@@ -3378,7 +3383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8290739160602557234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12998462, y: 0.22915506, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3402,6 +3407,7 @@ MonoBehaviour:
   player: {fileID: 6040287386948589632}
   child: {fileID: 4437045433379249801}
   sprite: {fileID: 6716442427077068626}
+  basePos: {x: -0.13, y: 0.25, z: 0}
   attackSpeed: 1
   m_OnAttack:
     m_PersistentCalls:
