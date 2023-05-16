@@ -13,7 +13,7 @@ public class ShopSystem
     {
         itemScriptableObjects = Resources.LoadAll<ItemScriptableObject>("ItemScriptableObjects/Items/");
     }
-    public ItemScriptableObject[] CheckWeight(float penality = 0)
+    public ItemScriptableObject[] CheckWeight(bool[] lockedItems,float penality = 0)
     {
         if(itemScriptableObjects == null)
         {
@@ -29,7 +29,7 @@ public class ShopSystem
             {
                 if (i < selectedPool.Length)
                 {
-                    if (selectedPool[i] == null)
+                    if (selectedPool[i] == null || !lockedItems[i])
                     {
                         selectedPool[i] = itemScriptableObject;
                     }
@@ -47,11 +47,13 @@ public class ShopSystem
     }
     private void CheckEmpty()
     {
+        bool[] locks = new bool[4];
         for (int i = 0; i < selectedPool.Length; i++)
         {
             if (selectedPool[i] == null)
             {
-                CheckWeight();
+                locks[i] = true;
+                CheckWeight(locks);
             }
         }
     }
