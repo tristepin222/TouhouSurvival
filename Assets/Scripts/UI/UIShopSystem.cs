@@ -20,7 +20,6 @@ public class UIShopSystem : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        volume.enabled = true;
         locks = new bool[4];
         shopSystem = new ShopSystem();
         Reroll();
@@ -121,5 +120,10 @@ public class UIShopSystem : MonoBehaviour
     {
         volume.enabled = false;
         parent.SetActive(false);
+    }
+
+    public void OnEnable()
+    {
+        volume.enabled = true;
     }
 }
