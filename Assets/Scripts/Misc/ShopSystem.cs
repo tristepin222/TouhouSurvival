@@ -76,7 +76,7 @@ public class ShopSystem
         selectedPool[itemIndex] = null;
     }
 
-    public void AddItem(int itemIndex)
+    public bool TryAddItem(int itemIndex)
     {
         switch (selectedPool[itemIndex].itemCategory)
         {
@@ -100,7 +100,20 @@ public class ShopSystem
                     }
                 }
                 RemoveItem(itemIndex);
-                break;
+                return true;
+            case Item.ItemType.Weapon:
+                int index = 0;
+                foreach(ItemScriptableObject weapon in GlobalController.Instance.weapons)
+                {
+                    if(weapon == null)
+                    {
+                        GlobalController.Instance.weapons[index] = selectedPool[itemIndex];
+                        return true;
+                    }
+                    index++;
+                }
+                return false;
         }
+        return false;
     }
 }
