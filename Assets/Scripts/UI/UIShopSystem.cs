@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.Rendering;
 
 public class UIShopSystem : MonoBehaviour
 {
@@ -10,14 +11,19 @@ public class UIShopSystem : MonoBehaviour
     [SerializeField] RarityScriptableObject rarityScriptableObject;
     [SerializeField] TextMeshProUGUI currentCoinAmountText;
     [SerializeField] TextMeshProUGUI rerollCoinAmountText;
+    [SerializeField] GameObject parent;
+    [SerializeField] Volume volume;
+    private bool[] locks;
     private ItemScriptableObject[] pool;
+    private int rerollAmount = 1;
     ShopSystem shopSystem;
     // Start is called before the first frame update
     private void Start()
     {
+        volume.enabled = true;
+        locks = new bool[4];
         shopSystem = new ShopSystem();
         Reroll();
-        rerollCoinAmountText.text = (GlobalController.Instance.coin * 5).ToString();
     }
     private IEnumerator ShowUpgrades(ItemScriptableObject[] selectedPool)
     {
@@ -83,10 +89,37 @@ public class UIShopSystem : MonoBehaviour
             HideUpgrade(indexItem);
         }
     }
-    public void Reroll()
+    public void Reroll(bool updateReroll = false)
     {
-        pool = shopSystem.CheckWeight();
-        StartCoroutine(ShowUpgrades(pool));
-        UpdateCoinAmount();
+        float rerollPrice = 15 * rerollAmount;
+        if ((GlobalController.Instance.coin - rerollPrice) > 0)
+        {
+            if (updateReroll) 
+            {
+                rerollAmount++;
+                GlobalController.Instance.coin -= rerollPrice;
+            }
+            pool = shopSystem.CheckWeight(locks);
+            StartCoroutine(ShowUpgrades(pool));
+            UpdateCoinAmount();
+            rerollPrice = 15 * rerollAmount;
+            rerollCoinAmountText.text = rerollPrice.ToString();
+        }
+    }
+    public void LockItem(int lockIndex)
+    {
+        if (locks[lockIndex])
+        {
+            locks[lockIndex] = false;
+        }
+        else
+        {
+            locks[lockIndex] = true;
+        }
+    }
+    public void Confirm()
+    {
+        volume.enabled = false;
+        parent.SetActive(false);
     }
 }
