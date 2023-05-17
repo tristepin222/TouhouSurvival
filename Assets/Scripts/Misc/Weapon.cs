@@ -46,8 +46,8 @@ public class Weapon : MonoBehaviour
             if (canMove)
             {
                 transform.LookAt(enemy.transform, Vector3.up);
-                transform.rotation = new Quaternion(0, 0, transform.rotation.x, 0);
-                transform.position = Vector3.MoveTowards(transform.position, enemy.position, speed * Time.deltaTime);
+                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.x);
+                transform.position = Vector3.MoveTowards(transform.position, enemy.position - new Vector3(0, 0.25f), speed * Time.deltaTime);
             }
             else
             {
