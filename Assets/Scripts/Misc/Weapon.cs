@@ -45,14 +45,15 @@ public class Weapon : MonoBehaviour
             }
             if (canMove)
             {
-                transform.LookAt(enemy.transform, Vector3.up);
-                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.x);
+                transform.rotation = Quaternion.FromToRotation(transform.position, enemy.position - transform.position);
+                transform.eulerAngles += new Vector3(0, 0, 90); 
                 transform.position = Vector3.MoveTowards(transform.position, enemy.position - new Vector3(0, 0.25f), speed * Time.deltaTime);
             }
             else
             {
                 if (transform.position != basePos)
                 {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
                     transform.localPosition = Vector3.MoveTowards(transform.localPosition, basePos, speed * Time.deltaTime);
                 }
             }
