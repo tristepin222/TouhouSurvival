@@ -16,6 +16,7 @@ public class GlobalController : MonoBehaviour
     public float coin;
     public bool isDead;
     public ItemScriptableObject[] weapons;
+    public List<ItemScriptableObject> items = new List<ItemScriptableObject>();
     // Start is called before the first frame update
     private void Awake()
     {
