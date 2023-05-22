@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class UIShopSystem : MonoBehaviour
 {
     [SerializeField] UIShopElement[] uIShopItems;
-    [SerializeField] UIShortUIElement template;
     [SerializeField] GameObject uIWeaponParent;
     [SerializeField] RarityScriptableObject rarityScriptableObject;
     [SerializeField] TextMeshProUGUI currentCoinAmountText;
@@ -17,8 +16,7 @@ public class UIShopSystem : MonoBehaviour
     [SerializeField] Volume volume;
     [SerializeField] FightSystem fightSystem;
     [SerializeField] UIItemsShower iUItemsShower;
-    float weaponPosX;
-    float weaponPosY;
+    [SerializeField] UIItemsShower iUWeaponsShower;
 
     private List<GameObject> uIWeapons= new List<GameObject>();
     private bool[] locks;
@@ -28,11 +26,10 @@ public class UIShopSystem : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        weaponPosX = template.parent.gameObject.transform.position.x;
-        weaponPosY = template.parent.gameObject.transform.position.y;
         locks = new bool[4];
         shopSystem = new ShopSystem();
-        ShowWeapons();
+        iUItemsShower.showItems(GlobalController.Instance.items.ToArray());
+        iUWeaponsShower.showItems(GlobalController.Instance.weapons);
         Reroll();
     }
     private IEnumerator ShowUpgrades(ItemScriptableObject[] selectedPool)
@@ -99,8 +96,8 @@ public class UIShopSystem : MonoBehaviour
                 UpdateCoinAmount();
                 HideUpgrade(indexItem);
                 fightSystem.SetWeapons();
-                ShowWeapons();
-                iUItemsShower.showItems();
+                iUWeaponsShower.showItems(GlobalController.Instance.weapons);
+                iUItemsShower.showItems(GlobalController.Instance.items.ToArray());
             }
         }
     }
@@ -138,36 +135,6 @@ public class UIShopSystem : MonoBehaviour
         parent.SetActive(false);
     }
 
-    public void ShowWeapons()
-    {
-        int index = 0;
-        weaponPosX = template.parent.gameObject.transform.position.x;
-        weaponPosY = template.parent.gameObject.transform.position.y;
-        foreach (GameObject uIWeapon in uIWeapons)
-        {
-            Destroy(uIWeapon);
-        }
-        uIWeapons = new List<GameObject>();
-        foreach (ItemScriptableObject weapon in GlobalController.Instance.weapons)
-        {
-            if (weapon != null)
-            {
-                uIWeapons.Add(Instantiate(template.parent.gameObject, uIWeaponParent.transform));
-                uIWeapons[index].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = weapon.itemName[0] + "" + weapon.itemName[weapon.itemName.Length - 1];
-                uIWeapons[index].SetActive(true);
-                RectTransform rectTransform = uIWeapons[index].GetComponent<RectTransform>();
-                uIWeapons[index].transform.position = new Vector3(weaponPosX, weaponPosY, 0);
-                weaponPosX += rectTransform.rect.width + 5;
-                if (index == 2)
-                {
-                    weaponPosX = template.parent.gameObject.transform.position.x;
-                    weaponPosY = template.parent.gameObject.transform.position.y;
-                    weaponPosY -= rectTransform.rect.height + 5;
-                }
-                index++;
-            }
-        }
-    }
 
     public void OnEnable()
     {
