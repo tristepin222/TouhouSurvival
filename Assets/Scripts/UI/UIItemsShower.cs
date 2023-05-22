@@ -15,10 +15,10 @@ public class UIItemsShower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        showItems();
+        showItems(GlobalController.Instance.items.ToArray());
     }
 
-    public void showItems()
+    public void showItems(ItemScriptableObject[] items)
     {
         int index = 0;
         itemPosX = template.parent.gameObject.transform.position.x;
@@ -28,7 +28,7 @@ public class UIItemsShower : MonoBehaviour
             Destroy(uItem);
         }
         uIItems = new List<GameObject>();
-        foreach (ItemScriptableObject item in GlobalController.Instance.items)
+        foreach (ItemScriptableObject item in items)
         {
             if (item != null)
             {
