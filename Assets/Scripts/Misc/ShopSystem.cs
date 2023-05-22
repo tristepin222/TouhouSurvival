@@ -99,6 +99,7 @@ public class ShopSystem
                             break;
                     }
                 }
+                GlobalController.Instance.items.Add(selectedPool[itemIndex]);
                 RemoveItem(itemIndex);
                 return true;
             case Item.ItemType.Weapon:
