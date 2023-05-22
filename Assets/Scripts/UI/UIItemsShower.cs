@@ -7,7 +7,8 @@ public class UIItemsShower : MonoBehaviour
 {
     [SerializeField] GameObject uIItemParent;
     [SerializeField] UIShortUIElement template;
-
+    [SerializeField] GameObject mouseOverTemplate;
+    [SerializeField] GameObject canvas;
     private List<GameObject> uIItems = new List<GameObject>();
 
     float itemPosX;
@@ -35,6 +36,8 @@ public class UIItemsShower : MonoBehaviour
                 uIItems.Add(Instantiate(template.parent.gameObject, uIItemParent.transform));
                 UIItem uIItem = uIItems[index].AddComponent<UIItem>();
                 uIItem.ItemScriptableObject = item;
+                uIItem.canvas = canvas;
+                uIItem.template = mouseOverTemplate;
                 uIItems[index].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = item.itemName[0] + "" + item.itemName[item.itemName.Length - 1];
                 uIItems[index].SetActive(true);
                 RectTransform rectTransform = uIItems[index].GetComponent<RectTransform>();
