@@ -9,6 +9,7 @@ public class UIItemsShower : MonoBehaviour
     [SerializeField] UIShortUIElement template;
     [SerializeField] GameObject mouseOverTemplate;
     [SerializeField] GameObject canvas;
+    [SerializeField] bool isWeapon;
     private List<GameObject> uIItems = new List<GameObject>();
 
     float itemPosX;
@@ -16,7 +17,14 @@ public class UIItemsShower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        showItems(GlobalController.Instance.items.ToArray());
+        if (isWeapon)
+        {
+            showItems(GlobalController.Instance.weapons);
+        }
+        else
+        {
+            showItems(GlobalController.Instance.items.ToArray());
+        }
     }
 
     public void showItems(ItemScriptableObject[] items)
@@ -34,10 +42,9 @@ public class UIItemsShower : MonoBehaviour
             if (item != null)
             {
                 uIItems.Add(Instantiate(template.parent.gameObject, uIItemParent.transform));
-                UIItem uIItem = uIItems[index].AddComponent<UIItem>();
+                UIItem uIItem = uIItems[index].GetComponent<UIItem>();
                 uIItem.ItemScriptableObject = item;
-                uIItem.canvas = canvas;
-                uIItem.template = mouseOverTemplate;
+                uIItem.index = index;
                 uIItems[index].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = item.itemName[0] + "" + item.itemName[item.itemName.Length - 1];
                 uIItems[index].SetActive(true);
                 RectTransform rectTransform = uIItems[index].GetComponent<RectTransform>();
