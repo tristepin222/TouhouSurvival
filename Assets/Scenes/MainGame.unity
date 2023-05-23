@@ -4121,6 +4121,10 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 112723149}
+    - target: {fileID: 2038319217, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HardDisableWeapons
+      objectReference: {fileID: 0}
     - target: {fileID: 543908612841861316, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: animator
       value: 

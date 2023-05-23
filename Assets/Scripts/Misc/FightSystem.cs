@@ -64,6 +64,14 @@ public class FightSystem : MonoBehaviour
         }
     }
 
+    public void HardDisableWeapons()
+    {
+        foreach (Weapon weapon in weapons)
+        {
+            weapon.HardDisable();
+        }
+    }
+
     Transform GetClosestEnemy()
     {
         getAllEnemies();
