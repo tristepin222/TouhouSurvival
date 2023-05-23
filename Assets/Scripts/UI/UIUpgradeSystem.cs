@@ -50,11 +50,9 @@ public class UIUpgradeSystem : MonoBehaviour
 
     private IEnumerator HideUpgrades()
     {
-        int i = 0;
-        foreach (UpgradeScriptableObject upgradeScriptableObject in pool)
+        foreach (UIShopElement uIShopElement in uIUpgradeItems)
         {
-            uIUpgradeItems[i].backGround.gameObject.SetActive(false);
-            i++;
+            uIShopElement.backGround.gameObject.SetActive(false);
         }
         yield return 0;
     }
