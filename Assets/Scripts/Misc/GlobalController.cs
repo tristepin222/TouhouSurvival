@@ -18,7 +18,7 @@ public class GlobalController : MonoBehaviour
     public ItemScriptableObject[] weapons;
     public List<ItemScriptableObject> items = new List<ItemScriptableObject>();
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
         bonusDamage += 1;
         bonusAttackSpeed += 1;
