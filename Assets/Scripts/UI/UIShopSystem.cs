@@ -137,6 +137,7 @@ public class UIShopSystem : MonoBehaviour
     public void Confirm()
     {
         volume.enabled = false;
+        enabled = false;
         parent.SetActive(false);
     }
 
