@@ -1438,6 +1438,11 @@ MonoBehaviour:
   isDead: 0
   weapons:
   - {fileID: 11400000, guid: 9dd4876d81680cd4ea8abbc2d8d3aa6e, type: 2}
+  - {fileID: 11400000, guid: 9dd4876d81680cd4ea8abbc2d8d3aa6e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   items: []
 --- !u!4 &84896117
 Transform:
