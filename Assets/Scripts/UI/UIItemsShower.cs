@@ -43,7 +43,7 @@ public class UIItemsShower : MonoBehaviour
             {
                 uIItems.Add(Instantiate(template.parent.gameObject, uIItemParent.transform));
                 UIItem uIItem = uIItems[index].GetComponent<UIItem>();
-                uIItem.ItemScriptableObject = item;
+                uIItem.itemScriptableObject = item;
                 uIItem.index = index;
                 uIItems[index].transform.Find("Name").GetComponent<TextMeshProUGUI>().text = item.itemName[0] + "" + item.itemName[item.itemName.Length - 1];
                 uIItems[index].SetActive(true);
