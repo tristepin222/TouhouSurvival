@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class UIItem : MonoBehaviour, IPointerEnterHandler
 {
     public ItemScriptableObject ItemScriptableObject;
+    public int index;
+    public UIOnHoverItem onHoverItem;
     public GameObject canvas;
-    public GameObject template;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Instantiate(template, canvas.transform);
-        template.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition / canvas.transform.localScale.x;
+        onHoverItem.transform.parent = canvas.transform;
+        onHoverItem.gameObject.SetActive(true);
+        onHoverItem.SetUI(ItemScriptableObject.itemShopSprite[0], ItemScriptableObject.itemName);
     }
 }
