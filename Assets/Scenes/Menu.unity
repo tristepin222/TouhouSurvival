@@ -34994,6 +34994,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5960451725503766128, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960451725503766128, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960451725503766128, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960451725503766128, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 3780
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960451725503766128, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960451725503766128, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5960451725503766129, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
       propertyPath: m_Camera
       value: 
