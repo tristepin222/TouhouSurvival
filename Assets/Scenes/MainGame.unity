@@ -3504,6 +3504,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2006407904}
+    - target: {fileID: 3647984313806901518, guid: 81c5eddfea0cd8741844fc891176282c, type: 3}
+      propertyPath: inGame
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6786567794107013920, guid: 81c5eddfea0cd8741844fc891176282c, type: 3}
       propertyPath: m_Name
       value: Template (1)
@@ -4804,11 +4808,19 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2006407904}
+    - target: {fileID: 3647984313806901518, guid: 81c5eddfea0cd8741844fc891176282c, type: 3}
+      propertyPath: inGame
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6786567794107013920, guid: 81c5eddfea0cd8741844fc891176282c, type: 3}
       propertyPath: m_Name
       value: Template (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6786567794107013920, guid: 81c5eddfea0cd8741844fc891176282c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676442314769519780, guid: 81c5eddfea0cd8741844fc891176282c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
