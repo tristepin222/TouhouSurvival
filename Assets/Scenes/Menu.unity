@@ -1429,11 +1429,16 @@ MonoBehaviour:
   bonusHealthAmount: 0
   bonusDamage: 0
   bonusAttackSpeed: 0
+  bonusSpeed: 0
   bonusRange: 0
   level: 0
   levelToUpgrade: 0
   xp: 0
+  coin: 0
   isDead: 0
+  weapons:
+  - {fileID: 11400000, guid: 9dd4876d81680cd4ea8abbc2d8d3aa6e, type: 2}
+  items: []
 --- !u!4 &84896117
 Transform:
   m_ObjectHideFlags: 0
@@ -10989,6 +10994,14 @@ PrefabInstance:
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1537119100, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537119100, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1799518174, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_InitialEventName
       value: PlayFire
@@ -11011,7 +11024,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1799518174, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.x
-      value: -0.06
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799518174, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1799518174, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.x
@@ -11111,11 +11128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2062921746642571541, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.141
+      value: 0.13999996
       objectReference: {fileID: 0}
     - target: {fileID: 2062921746642571541, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.372
+      value: -0.119999975
       objectReference: {fileID: 0}
     - target: {fileID: 2062921746642571541, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11142,6 +11159,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2326087927663674403, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+    - target: {fileID: 2326087927663674403, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_SortingOrder
       value: 84
       objectReference: {fileID: 0}
@@ -11154,16 +11175,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2773361367603528148, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+    - target: {fileID: 2773361367603528148, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_SortingOrder
       value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 2823549869887084678, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.172
+      value: -0.09000002
       objectReference: {fileID: 0}
     - target: {fileID: 2823549869887084678, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.075
+      value: -0.109999985
       objectReference: {fileID: 0}
     - target: {fileID: 2823549869887084678, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11191,7 +11216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3739358204672394011, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.253
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3739358204672394011, guid: 35c65392e425a9b43962d71cda216cde, type: 3}
       propertyPath: m_LocalPosition.y
@@ -34344,6 +34369,13 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!114 &2127127753
 MonoBehaviour:
   m_ObjectHideFlags: 0
