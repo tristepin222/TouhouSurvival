@@ -34,7 +34,7 @@ public class UIShopSystem : MonoBehaviour
         shopSystem = new ShopSystem();
         iUItemsShower.showItems(GlobalController.Instance.items.ToArray());
         iUWeaponsShower.showItems(GlobalController.Instance.weapons);
-        Reroll();
+        Reroll(force: true);
     }
     private IEnumerator ShowUpgrades(ItemScriptableObject[] selectedPool)
     {
@@ -105,10 +105,10 @@ public class UIShopSystem : MonoBehaviour
             }
         }
     }
-    public void Reroll(bool updateReroll = false)
+    public void Reroll(bool updateReroll = false, bool force = false)
     {
         float rerollPrice = 15 * rerollAmount;
-        if ((GlobalController.Instance.coin - rerollPrice) > 0)
+        if ((GlobalController.Instance.coin - rerollPrice) > 0 || force)
         {
             if (updateReroll) 
             {
