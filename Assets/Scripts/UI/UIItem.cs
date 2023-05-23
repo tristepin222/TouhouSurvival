@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIItem : MonoBehaviour, IPointerEnterHandler
 {
-    public ItemScriptableObject ItemScriptableObject;
+    public ItemScriptableObject itemScriptableObject;
     public int index;
     public UIOnHoverItem onHoverItem;
     public GameObject canvas;
@@ -15,6 +15,11 @@ public class UIItem : MonoBehaviour, IPointerEnterHandler
     {
         onHoverItem.transform.parent = canvas.transform;
         onHoverItem.gameObject.SetActive(true);
-        onHoverItem.SetUI(ItemScriptableObject.itemShopSprite[0], ItemScriptableObject.itemName);
+        string description = "";
+        foreach(ItemInfo itemInfo in itemScriptableObject.itemInfos)
+        {
+            description += "+" + "<color=" + "#4A58FF" + ">" + itemInfo.value + "</color>" + " " + itemInfo.name + "<br>";
+        }
+        onHoverItem.SetUI(itemScriptableObject.itemShopSprite[0], itemScriptableObject.itemName, description);
     }
 }
