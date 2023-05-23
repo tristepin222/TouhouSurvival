@@ -27,6 +27,7 @@ public class UIShopSystem : MonoBehaviour
     private void Start()
     {
         init();
+        Reroll(true);
     }
     private void init()
     {
@@ -34,7 +35,7 @@ public class UIShopSystem : MonoBehaviour
         shopSystem = new ShopSystem();
         iUItemsShower.showItems(GlobalController.Instance.items.ToArray());
         iUWeaponsShower.showItems(GlobalController.Instance.weapons);
-        Reroll(force: true);
+        
     }
     private IEnumerator ShowUpgrades(ItemScriptableObject[] selectedPool)
     {
@@ -105,22 +106,19 @@ public class UIShopSystem : MonoBehaviour
             }
         }
     }
-    public void Reroll(bool updateReroll = false, bool force = false)
+    public void Reroll(bool updateReroll = false)
     {
         float rerollPrice = 15 * rerollAmount;
-        if ((GlobalController.Instance.coin - rerollPrice) > 0 || force)
+        if ((GlobalController.Instance.coin - rerollPrice) > 0 && updateReroll)
         {
-            if (updateReroll) 
-            {
-                rerollAmount++;
-                GlobalController.Instance.coin -= rerollPrice;
-            }
+            rerollAmount++;
+            GlobalController.Instance.coin -= rerollPrice;
             pool = shopSystem.CheckWeight(locks);
             StartCoroutine(ShowUpgrades(pool));
-            UpdateCoinAmount();
-            rerollPrice = 15 * rerollAmount;
-            rerollCoinAmountText.text = rerollPrice.ToString();
         }
+        UpdateCoinAmount();
+        rerollPrice = 15 * rerollAmount;
+        rerollCoinAmountText.text = rerollPrice.ToString();
     }
     public void LockItem(int lockIndex)
     {
@@ -143,6 +141,7 @@ public class UIShopSystem : MonoBehaviour
     public void OnEnable()
     {
         init();
+        Reroll();
         volume.enabled = true;
     }
 }
