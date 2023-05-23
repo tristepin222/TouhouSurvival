@@ -109,10 +109,13 @@ public class UIShopSystem : MonoBehaviour
     public void Reroll(bool updateReroll = false)
     {
         float rerollPrice = 15 * rerollAmount;
-        if ((GlobalController.Instance.coin - rerollPrice) > 0 && updateReroll)
+        if ((GlobalController.Instance.coin - rerollPrice) > 0)
         {
             rerollAmount++;
             GlobalController.Instance.coin -= rerollPrice;
+        }
+        if (updateReroll)
+        {
             pool = shopSystem.CheckWeight(locks);
             StartCoroutine(ShowUpgrades(pool));
         }
