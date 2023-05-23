@@ -6,6 +6,12 @@ public class CoinSystem : MonoBehaviour
 {
     [SerializeField] UICoinSystem uICoinSystem;
 
+    private void Start()
+    {
+        uICoinSystem.SetCoin(GlobalController.Instance.coin);
+    }
+
+
     private void AddCoin(float amount)
     {
         GlobalController.Instance.coin += amount;
