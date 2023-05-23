@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5960451725503766128, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960451725503766128, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 3780
+      objectReference: {fileID: 0}
     - target: {fileID: 5960451725503766130, guid: b85ba828b5ad2384e9f270899dd15b19, type: 3}
       propertyPath: m_Pivot.x
       value: 0
