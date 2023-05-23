@@ -46,15 +46,18 @@ public class FightSystem : MonoBehaviour
         {
             indexWeapon = 0;
         }
-        isFighting = true;
-        Transform enemy = GetClosestEnemy();
-        if (enemy != null)
+        if (weapons[indexWeapon] != null)
         {
-            weapons[indexWeapon].Attack(enemy);
+            isFighting = true;
+            Transform enemy = GetClosestEnemy();
+            if (enemy != null)
+            {
+                weapons[indexWeapon].Attack(enemy);
+            }
+            yield return new WaitForSeconds(attackSpeedRation / (GlobalController.Instance.bonusAttackSpeed / 100 + 1));
+            indexWeapon++;
+            isFighting = false;
         }
-        yield return new WaitForSeconds(attackSpeedRation/(GlobalController.Instance.bonusAttackSpeed/100+1));
-        indexWeapon++;
-        isFighting = false;
     }
 
     public void DisableWeapons()
