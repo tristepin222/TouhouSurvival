@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 6519670123736728396}
   - component: {fileID: 6937629195722360903}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 203912341, guid: 7b021fe3fb7e607499d1ed3f97755852, type: 3}
+  m_Sprite: {fileID: -679853702, guid: ecd4e52653879304bafb355fda225aef, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -222,8 +222,9 @@ GameObject:
   - component: {fileID: 2402837299527251255}
   - component: {fileID: 6820898798483678146}
   - component: {fileID: 7602387703925642140}
+  - component: {fileID: 957727294494629407}
   m_Layer: 5
-  m_Name: Template (1)
+  m_Name: OnHoverTemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,7 +251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 297.46475, y: 557.1831}
   m_SizeDelta: {x: 256, y: 356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6820898798483678146
@@ -291,6 +292,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &957727294494629407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152773082802641845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11512da1a35a62d4fa46ecb75c4b8c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 6937629195722360903}
+  textMesh: {fileID: 7622024561606659689}
 --- !u!1 &5377024297028330755
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Card name
+  m_text: Reisen's ears
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47b70de50b5965340b5a6c035a21aae7, type: 2}
   m_sharedMaterial: {fileID: -1459633779333130472, guid: 47b70de50b5965340b5a6c035a21aae7, type: 2}
