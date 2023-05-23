@@ -22,7 +22,6 @@ public class GlobalController : MonoBehaviour
     {
         bonusDamage += 1;
         bonusAttackSpeed += 1;
-        weapons = new ItemScriptableObject[6];
         if (Instance == null)
         {
             Instance = this;
