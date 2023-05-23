@@ -26,6 +26,10 @@ public class UIShopSystem : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        init();
+    }
+    private void init()
+    {
         locks = new bool[4];
         shopSystem = new ShopSystem();
         iUItemsShower.showItems(GlobalController.Instance.items.ToArray());
@@ -138,6 +142,7 @@ public class UIShopSystem : MonoBehaviour
 
     public void OnEnable()
     {
+        init();
         volume.enabled = true;
     }
 }
