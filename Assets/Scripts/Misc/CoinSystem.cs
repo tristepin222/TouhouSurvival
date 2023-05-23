@@ -6,11 +6,6 @@ public class CoinSystem : MonoBehaviour
 {
     [SerializeField] UICoinSystem uICoinSystem;
 
-    private void Start()
-    {
-        AddCoin(GlobalController.Instance.coin);
-    }
-
     private void AddCoin(float amount)
     {
         GlobalController.Instance.coin += amount;
@@ -23,7 +18,7 @@ public class CoinSystem : MonoBehaviour
         {
             if (loot.item.itemType == Item.ItemType.Coin)
             {
-                AddCoin(1f);
+                AddCoin(2f);
                 Destroy(collision.gameObject);
             }
         }
