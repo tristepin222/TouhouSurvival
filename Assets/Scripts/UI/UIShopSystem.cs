@@ -26,13 +26,15 @@ public class UIShopSystem : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        shopSystem = new ShopSystem();
+        pool = shopSystem.CheckWeight(locks);
+        StartCoroutine(ShowUpgrades(pool));
         init();
-        Reroll(true);
+        UpdateGUI();
     }
     private void init()
     {
         locks = new bool[4];
-        shopSystem = new ShopSystem();
         iUItemsShower.showItems(GlobalController.Instance.items.ToArray());
         iUWeaponsShower.showItems(GlobalController.Instance.weapons);
         
@@ -106,22 +108,23 @@ public class UIShopSystem : MonoBehaviour
             }
         }
     }
-    public void Reroll(bool updateReroll = false)
+    public void UpdateGUI()
+    {
+        float rerollPrice = 15 * rerollAmount;
+        UpdateCoinAmount();
+        rerollCoinAmountText.text = rerollPrice.ToString();
+    }
+    public void Reroll()
     {
         float rerollPrice = 15 * rerollAmount;
         if ((GlobalController.Instance.coin - rerollPrice) > 0)
         {
             rerollAmount++;
             GlobalController.Instance.coin -= rerollPrice;
-        }
-        if (updateReroll)
-        {
             pool = shopSystem.CheckWeight(locks);
             StartCoroutine(ShowUpgrades(pool));
         }
-        UpdateCoinAmount();
-        rerollPrice = 15 * rerollAmount;
-        rerollCoinAmountText.text = rerollPrice.ToString();
+        UpdateGUI();
     }
     public void LockItem(int lockIndex)
     {
@@ -145,7 +148,7 @@ public class UIShopSystem : MonoBehaviour
     public void OnEnable()
     {
         init();
-        Reroll();
+        UpdateGUI();
         volume.enabled = true;
     }
 }
