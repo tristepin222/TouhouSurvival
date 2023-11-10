@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthSystem : HealthSystem
 {
@@ -16,9 +17,11 @@ public class PlayerHealthSystem : HealthSystem
 
     [SerializeField]
     private OnDeathEvent m_OnDeath = new OnDeathEvent();
-
+    [SerializeField]
+    Collider2D collider;
     protected override void Start()
     {
+        healthSlider = FindFirstObjectByType<UIHealthSystem>();
         GlobalController.Instance.isDead = false;
         baseHealth += GlobalController.Instance.bonusHealthAmount;
         base.Start();
@@ -45,8 +48,27 @@ public class PlayerHealthSystem : HealthSystem
         {
             Damage(1f);
             healthSlider.SetSlider(baseHealth, Health);
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<LootSystem>().Loot();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       
+        if (collision.transform.tag == "EnemyBullet")
+        {
+            if (collision.IsTouching(collider))
+            {
+                Damage(1f);
+                healthSlider.SetSlider(baseHealth, Health);
+                Destroy(collision.gameObject);
+            }
+        }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public OnDeathEvent onEffectStart

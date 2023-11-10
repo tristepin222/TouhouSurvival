@@ -21,7 +21,7 @@ public class EffectPlayer : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField]
     private OnEffectEvent m_OnEffectStart = new OnEffectEvent();
-
+    public UnityAction m_playAnim;
     public void StopAllAIs()
     {
         AIPath[] gameObjects = FindObjectsOfType<AIPath>();
@@ -70,6 +70,10 @@ public class EffectPlayer : MonoBehaviour
         {
             animator.Play(deaths[0].animationName);
         }
+    }
+    public void SetEffect()
+    {
+        m_OnEffectStart.AddListener(GameObject.Find("DeathScene").GetComponent<EffectPlayer>().PlayAnimation);
     }
     public void PlaySound()
     {

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3570957902579864528, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+      propertyPath: Ls
+      value: 
+      objectReference: {fileID: 382959534689505280}
     - target: {fileID: 631848506, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
       propertyPath: m_Name
       value: WingTop
@@ -41,11 +45,11 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 475463422078871604, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
-      propertyPath: loots.Array.data[0]
+      propertyPath: 'loots.Array.data[0]'
       value: 
       objectReference: {fileID: 4872098914270085862, guid: 4bf962fe4c8a373458d8f59d4e2fe401, type: 3}
     - target: {fileID: 475463422078871604, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
-      propertyPath: loots.Array.data[1]
+      propertyPath: 'loots.Array.data[1]'
       value: 
       objectReference: {fileID: 4872098914270085862, guid: 484f30dad01a0134b9cd163eb3bafe8c, type: 3}
     - target: {fileID: 646878513906985829, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
@@ -204,3 +208,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+--- !u!114 &382959534689505280 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 475463422078871604, guid: 3ddef10d601e9b24fa68bc40e0df30b8, type: 3}
+  m_PrefabInstance: {fileID: 272930519047977012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6c51a37b2a64343b8c50f930360cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

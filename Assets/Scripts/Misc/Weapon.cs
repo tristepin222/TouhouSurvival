@@ -21,6 +21,8 @@ public class Weapon : MonoBehaviour
     public class OnResetEvent : UnityEvent { }
     public float attackSpeed = 1.0f;
 
+    public ItemScriptableObject weapon;
+
     [SerializeField]
     private OnAttackEvent m_OnAttack = new OnAttackEvent();
     [SerializeField]
@@ -62,6 +64,7 @@ public class Weapon : MonoBehaviour
 
     public void Attack(Transform enemy)
     {
+        transform.GetComponentInChildren<AudioSource>().Play();
         this.enemy = enemy;
         canMove = true;
         m_OnAttack.Invoke();
@@ -91,6 +94,7 @@ public class Weapon : MonoBehaviour
 
     public void SetWeapon(ItemScriptableObject itemScriptableObject)
     {
+        weapon = itemScriptableObject;
         sprite.sprite = itemScriptableObject.itemGameSprite[0];
     }
 

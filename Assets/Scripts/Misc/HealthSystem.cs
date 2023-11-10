@@ -6,7 +6,8 @@ using System;
 public class HealthSystem : MonoBehaviour, IDamageable
 {
     [SerializeField] protected float baseHealth;
-
+    [SerializeField] protected LootSystem Ls;
+    [SerializeField] protected BossSystem boss;
     float currentHealth;
 
     protected virtual void Start()
@@ -36,7 +37,18 @@ public class HealthSystem : MonoBehaviour, IDamageable
     }
     protected virtual void Die()
     {
-        Destroy(this.gameObject);
+        if(boss!= null)
+        {
+            boss.Die();
+        }
+        if (Ls != null)
+        {
+            Ls.Loot();
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)

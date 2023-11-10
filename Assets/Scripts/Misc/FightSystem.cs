@@ -10,11 +10,13 @@ public class FightSystem : MonoBehaviour
     [SerializeField] GameObject menu;
     private int indexWeapon;
     private bool isFighting;
-    private bool menuShowed;
+    public bool menuShowed;
     private GameObject[] enemies;
     private float maxDistance;
 
-    public float attackSpeedRation = 1.0f;
+    private int maxWeapons;
+
+    public float attackSpeedRation = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,11 +44,11 @@ public class FightSystem : MonoBehaviour
     }
     private IEnumerator AttackEach()
     {
-        if (indexWeapon >= weapons.Length)
+        if (indexWeapon >= maxWeapons)
         {
             indexWeapon = 0;
         }
-        if (weapons[indexWeapon] != null)
+        if (weapons[indexWeapon].weapon != null)
         {
             isFighting = true;
             Transform enemy = GetClosestEnemy();
@@ -115,6 +117,10 @@ public class FightSystem : MonoBehaviour
                 weapon.HardDisable();
             }
             index++;
+            if(weapon.weapon != null)
+            {
+                maxWeapons++;
+            }
         }
     }
     private void getAllEnemies()

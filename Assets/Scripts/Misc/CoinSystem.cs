@@ -8,6 +8,7 @@ public class CoinSystem : MonoBehaviour
 
     private void Start()
     {
+        uICoinSystem = FindFirstObjectByType<UICoinSystem>();
         uICoinSystem.SetCoin(GlobalController.Instance.coin);
     }
 

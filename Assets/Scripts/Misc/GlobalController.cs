@@ -17,6 +17,9 @@ public class GlobalController : MonoBehaviour
     public bool isDead;
     public ItemScriptableObject[] weapons;
     public List<ItemScriptableObject> items = new List<ItemScriptableObject>();
+
+    public float soundValue;
+    public float musicValue;
     // Start is called before the first frame update
     private void Start()
     {

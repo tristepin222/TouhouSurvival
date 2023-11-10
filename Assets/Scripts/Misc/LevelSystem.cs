@@ -15,6 +15,7 @@ public class LevelSystem : MonoBehaviour
     {
         xp = GlobalController.Instance.xp;
         level = GlobalController.Instance.level;
+        uIXPSystem = FindFirstObjectByType<UIXPSystem>();
         maxXPAmount = uIXPSystem.CalculateNewMaxAmount(RATIO, level);
         uIXPSystem.SetAmount(xp);
     }

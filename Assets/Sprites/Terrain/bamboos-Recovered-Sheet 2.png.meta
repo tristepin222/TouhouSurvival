@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: 4751ec95c33a5f848b1a83c170ace0c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3855880824622186290
+    second: bamboos-Recovered-Sheet 2_0
+  - first:
+      213: -1041408759641761431
+    second: bamboos-Recovered-Sheet 2_1
+  - first:
+      213: -6716047141921076933
+    second: bamboos-Recovered-Sheet 2_2
+  - first:
+      213: -4666162248296754856
+    second: bamboos-Recovered-Sheet 2_3
+  - first:
+      213: 4363137840014566313
+    second: bamboos-Recovered-Sheet 2_4
+  - first:
+      213: 1580734164307100367
+    second: bamboos-Recovered-Sheet 2_5
+  - first:
+      213: 749236280855773435
+    second: bamboos-Recovered-Sheet 2_6
+  - first:
+      213: 250173994414055028
+    second: bamboos-Recovered-Sheet 2_7
+  - first:
+      213: 7138813596249323134
+    second: bamboos-Recovered-Sheet 2_8
+  - first:
+      213: -585465138941457233
+    second: bamboos-Recovered-Sheet 2_9
+  - first:
+      213: -4492502887767688874
+    second: bamboos-Recovered-Sheet 2_10
+  - first:
+      213: -4243375554685305745
+    second: bamboos-Recovered-Sheet 2_11
+  - first:
+      213: -5530007248380332441
+    second: bamboos-Recovered-Sheet 2_12
+  - first:
+      213: -8983914895973332044
+    second: bamboos-Recovered-Sheet 2_13
+  - first:
+      213: -7406246178946266371
+    second: bamboos-Recovered-Sheet 2_14
+  - first:
+      213: -7853144841839426982
+    second: bamboos-Recovered-Sheet 2_15
+  - first:
+      213: -1459713521365196737
+    second: bamboos-Recovered-Sheet 2_16
+  - first:
+      213: -7741851332331888130
+    second: bamboos-Recovered-Sheet 2_17
+  - first:
+      213: -8378539986473660000
+    second: bamboos-Recovered-Sheet 2_18
+  - first:
+      213: 6459174929609272657
+    second: bamboos-Recovered-Sheet 2_19
+  - first:
+      213: 847519848867067814
+    second: bamboos-Recovered-Sheet 2_20
+  - first:
+      213: -8620812103078807724
+    second: bamboos-Recovered-Sheet 2_21
+  - first:
+      213: 1256846195386373984
+    second: bamboos-Recovered-Sheet 2_22
+  - first:
+      213: 3858964001836297599
+    second: bamboos-Recovered-Sheet 2_23
+  - first:
+      213: 2308018895268194922
+    second: bamboos-Recovered-Sheet 2_24
+  - first:
+      213: -4396080122164851420
+    second: bamboos-Recovered-Sheet 2_25
+  - first:
+      213: -688917067282932220
+    second: bamboos-Recovered-Sheet 2_26
+  - first:
+      213: -2063012561431466924
+    second: bamboos-Recovered-Sheet 2_27
+  - first:
+      213: 3713212768744641443
+    second: bamboos-Recovered-Sheet 2_28
+  - first:
+      213: 1893672535915191106
+    second: bamboos-Recovered-Sheet 2_29
+  - first:
+      213: 1124076715652309993
+    second: bamboos-Recovered-Sheet 2_30
+  - first:
+      213: -3657039579365058837
+    second: bamboos-Recovered-Sheet 2_31
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec08720c1d82d7ac0800000000000000
+      internalID: -3855880824622186290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 969929f204c2c81f0800000000000000
+      internalID: -1041408759641761431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39440325becbc2a0800000000000000
+      internalID: -6716047141921076933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8511fe558267e3fb0800000000000000
+      internalID: -4666162248296754856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a32224afbafc8c30800000000000000
+      internalID: 4363137840014566313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc249dbe855efe510800000000000000
+      internalID: 1580734164307100367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf04e358d62d56a00800000000000000
+      internalID: 749236280855773435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e17152cebc87300800000000000000
+      internalID: 250173994414055028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e767b2a8429221360800000000000000
+      internalID: 7138813596249323134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_9
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac050dde8200e7f0800000000000000
+      internalID: -585465138941457233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_10
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 659b0360d6c67a1c0800000000000000
+      internalID: -4492502887767688874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6cf7665a608c15c0800000000000000
+      internalID: -4243375554685305745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76674f2f4b77143b0800000000000000
+      internalID: -5530007248380332441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_13
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb4b2d3009b25380800000000000000
+      internalID: -8983914895973332044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_14
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa40d8175ab73990800000000000000
+      internalID: -7406246178946266371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a524874cf56040390800000000000000
+      internalID: -7853144841839426982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_16
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f306135494e0ebbe0800000000000000
+      internalID: -1459713521365196737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_17
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef129783b3b6f8490800000000000000
+      internalID: -7741851332331888130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_18
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a1d4d1164279bb80800000000000000
+      internalID: -8378539986473660000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_19
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d2875506993a950800000000000000
+      internalID: 6459174929609272657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_20
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a770dbefcef2cb00800000000000000
+      internalID: 847519848867067814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_21
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45779983119bc5880800000000000000
+      internalID: -8620812103078807724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_22
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0675e45a4f6317110800000000000000
+      internalID: 1256846195386373984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_23
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7de872605bcd8530800000000000000
+      internalID: 3858964001836297599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_24
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6aa953f4fab70020800000000000000
+      internalID: 2308018895268194922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_25
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d453a9b6cfdf2c0800000000000000
+      internalID: -4396080122164851420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_26
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e95ecc3997076f0800000000000000
+      internalID: -688917067282932220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_27
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c65b47105be53e0800000000000000
+      internalID: -2063012561431466924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_28
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a31878f65bf78330800000000000000
+      internalID: 3713212768744641443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_29
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b5328632da74a10800000000000000
+      internalID: 1893672535915191106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_30
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e36eb831d5899f00800000000000000
+      internalID: 1124076715652309993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bamboos-Recovered-Sheet 2_31
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6d66ed0e59f3dc0800000000000000
+      internalID: -3657039579365058837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 45111367c3a0ff9448ef6583fc767118
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bamboos-Recovered-Sheet 2_0: -3855880824622186290
+      bamboos-Recovered-Sheet 2_1: -1041408759641761431
+      bamboos-Recovered-Sheet 2_10: -4492502887767688874
+      bamboos-Recovered-Sheet 2_11: -4243375554685305745
+      bamboos-Recovered-Sheet 2_12: -5530007248380332441
+      bamboos-Recovered-Sheet 2_13: -8983914895973332044
+      bamboos-Recovered-Sheet 2_14: -7406246178946266371
+      bamboos-Recovered-Sheet 2_15: -7853144841839426982
+      bamboos-Recovered-Sheet 2_16: -1459713521365196737
+      bamboos-Recovered-Sheet 2_17: -7741851332331888130
+      bamboos-Recovered-Sheet 2_18: -8378539986473660000
+      bamboos-Recovered-Sheet 2_19: 6459174929609272657
+      bamboos-Recovered-Sheet 2_2: -6716047141921076933
+      bamboos-Recovered-Sheet 2_20: 847519848867067814
+      bamboos-Recovered-Sheet 2_21: -8620812103078807724
+      bamboos-Recovered-Sheet 2_22: 1256846195386373984
+      bamboos-Recovered-Sheet 2_23: 3858964001836297599
+      bamboos-Recovered-Sheet 2_24: 2308018895268194922
+      bamboos-Recovered-Sheet 2_25: -4396080122164851420
+      bamboos-Recovered-Sheet 2_26: -688917067282932220
+      bamboos-Recovered-Sheet 2_27: -2063012561431466924
+      bamboos-Recovered-Sheet 2_28: 3713212768744641443
+      bamboos-Recovered-Sheet 2_29: 1893672535915191106
+      bamboos-Recovered-Sheet 2_3: -4666162248296754856
+      bamboos-Recovered-Sheet 2_30: 1124076715652309993
+      bamboos-Recovered-Sheet 2_31: -3657039579365058837
+      bamboos-Recovered-Sheet 2_4: 4363137840014566313
+      bamboos-Recovered-Sheet 2_5: 1580734164307100367
+      bamboos-Recovered-Sheet 2_6: 749236280855773435
+      bamboos-Recovered-Sheet 2_7: 250173994414055028
+      bamboos-Recovered-Sheet 2_8: 7138813596249323134
+      bamboos-Recovered-Sheet 2_9: -585465138941457233
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -549,26 +549,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      weapons-Sheet_12: 554089721
-      weapons-Sheet_19: 1999471059
-      weapons-Sheet_14: 1094110133
-      weapons-Sheet_6: 865992539
-      weapons-Sheet_2: 1661322445
-      weapons-Sheet_3: -947855893
-      weapons-Sheet_18: -256896591
-      weapons-Sheet_15: -172475418
-      weapons-Sheet_17: -2003897358
-      weapons-Sheet_8: 1459716307
-      weapons-Sheet_9: -94905873
+      weapons-Sheet_0: 203912341
+      weapons-Sheet_1: -1987962668
       weapons-Sheet_10: 1234313185
       weapons-Sheet_11: -1262266357
-      weapons-Sheet_0: 203912341
-      weapons-Sheet_16: 1250410056
-      weapons-Sheet_5: 505778923
+      weapons-Sheet_12: 554089721
       weapons-Sheet_13: 222052038
-      weapons-Sheet_1: -1987962668
+      weapons-Sheet_14: 1094110133
+      weapons-Sheet_15: -172475418
+      weapons-Sheet_16: 1250410056
+      weapons-Sheet_17: -2003897358
+      weapons-Sheet_18: -256896591
+      weapons-Sheet_19: 1999471059
+      weapons-Sheet_2: 1661322445
+      weapons-Sheet_3: -947855893
       weapons-Sheet_4: 1770463298
+      weapons-Sheet_5: 505778923
+      weapons-Sheet_6: 865992539
       weapons-Sheet_7: -401330309
+      weapons-Sheet_8: 1459716307
+      weapons-Sheet_9: -94905873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

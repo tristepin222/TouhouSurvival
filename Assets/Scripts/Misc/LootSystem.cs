@@ -8,7 +8,7 @@ public class LootSystem : MonoBehaviour
     GameObject currentLoot;
     // Start is called before the first frame update
 
-    private void OnDestroy()
+    public void Loot()
     {
         if (!this.gameObject.scene.isLoaded) return;
         foreach (GameObject loot in loots)
@@ -16,5 +16,6 @@ public class LootSystem : MonoBehaviour
             currentLoot = Instantiate(loot);
             currentLoot.transform.position = transform.position;
         }
+        Destroy(this.gameObject);
     }
 }

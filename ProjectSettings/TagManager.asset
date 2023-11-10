@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - XPOrb
   - Coin
+  - Cullable
+  - EnemyBullet
+  - Audio
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - Obstacle
   - Water
   - UI
-  - 
-  - 
+  - Ais
+  - MiniMap
   - 
   - 
   - 
@@ -44,11 +48,17 @@ TagManager:
   - name: Floor
     uniqueID: 558794825
     locked: 0
+  - name: Wall
+    uniqueID: 165237265
+    locked: 0
   - name: Trails
     uniqueID: 3511248671
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Roof
+    uniqueID: 1652479335
     locked: 0
   - name: EffectsTop
     uniqueID: 3461591103
